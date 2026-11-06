@@ -1,0 +1,2506 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AlgoFlow Studio v6.1 - The Living Algorithm City & Visual Programming
+      Workbench
+    </title>
+    <!-- Official Brand Favicon (Feature 2) -->
+    <link
+      id="appFavicon"
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,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"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/png;base64,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"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js & OrbitControls -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Modular Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="h-screen flex flex-col">
+    <!-- ================= TOP HEADER ================= -->
+    <header
+      class="relative min-h-11 bg-[#121521] border-b border-[#232942] pl-[92px] pr-[94px] py-1 flex flex-wrap items-center justify-between gap-1.5 shrink-0 z-30"
+    >
+      <!-- Nút Thanh Trái nằm gọn gàng ở sát góc trên cùng bên trái -->
+      <button
+        id="btnToggleLeftDrawer"
+        onclick="toggleLeftDrawer()"
+        class="absolute top-1.5 left-2 z-40 text-[11px] leading-tight px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-indigo-300 border border-indigo-500/30 font-semibold transition"
+        title="Đóng/Mở thanh Khối lệnh & Tham số bên trái"
+      >
+        ◧ Thanh Trái
+      </button>
+
+      <!-- Cụm trái dải giữa: Logo + Tabs + Undo/Redo -->
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <div
+          id="headerBrandBadge"
+          onclick="openBrandIdentityModal()"
+          class="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-cyan-400/50 text-indigo-200 font-bold text-xs mono cursor-pointer transition shadow-sm"
+          title="AlgoFlow Studio v6.1 Official Brand Identity — Nhấp để xem thông tin phiên bản"
+        >
+          <img
+            id="headerBrandLogo"
+            src="data:image/png;base64,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"
+            alt="AlgoFlow Official Logo"
+            class="brand-logo-img"
+          />
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span
+            class="bg-gradient-to-r from-cyan-300 via-indigo-200 to-purple-300 bg-clip-text text-transparent font-extrabold"
+            >AlgoFlow v6.1</span
+          >
+        </div>
+
+        <div
+          class="flex items-center bg-[#090b14] p-0.5 rounded border border-[#232942] max-w-[340px] overflow-x-auto"
+          id="tabContainer"
+        ></div>
+
+        <button
+          id="btnAddTab"
+          onclick="openFunctionModal()"
+          class="text-xs px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-cyan-300 border border-cyan-500/30"
+          title="Thêm Quận / Hàm con mới"
+        >
+          + Thêm Quận (Tab)
+        </button>
+        <button
+          onclick="deleteCurrentTab()"
+          class="text-xs px-2 py-1 rounded bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30"
+          title="Xóa tab đang làm việc"
+        >
+          🗑 Xóa Tab
+        </button>
+        <button
+          onclick="resetCurrentTab()"
+          class="text-xs px-2 py-1 rounded bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30"
+          title="Reset sơ đồ hiện tại"
+        >
+          ↺ Reset
+        </button>
+
+        <div
+          class="flex items-center gap-1 ml-0.5 pl-1.5 border-l border-[#232942]"
+        >
+          <button
+            id="btnUndo"
+            onclick="undoAction()"
+            class="text-xs px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-300 border border-[#232942] disabled:opacity-40 disabled:pointer-events-none"
+            title="Hoàn tác (Ctrl+Z)"
+          >
+            ↶ Undo
+          </button>
+          <button
+            id="btnRedo"
+            onclick="redoAction()"
+            class="text-xs px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-300 border border-[#232942] disabled:opacity-40 disabled:pointer-events-none"
+            title="Làm lại (Ctrl+Y)"
+          >
+            ↷ Redo
+          </button>
+        </div>
+      </div>
+
+      <!-- Cụm phải dải giữa: Preset, Quest, Công cụ 3D, Phác thảo, Sổ tay, JSON, SFX -->
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <select
+          id="presetSelect"
+          onchange="loadPreset(this.value, true)"
+          class="bg-[#090b14] text-xs border border-[#232942] rounded px-2 py-1 text-slate-200"
+          title="Chọn mẫu đô thị giải thuật có sẵn (bao gồm Mảng 1D, Ma trận 2D & Con trỏ)"
+        >
+          <option value="perfect">
+            Mẫu 1: Thành phố Số Hoàn Hảo (Đa tầng L0-L2)
+          </option>
+          <option value="array">
+            Mẫu 2: Kho Voxel Mảng 1 Chiều (3D Array Watch)
+          </option>
+          <option value="matrix2d">
+            Mẫu 3: Ma Trận 2 Chiều N×M &amp; Tia Con Trỏ 3D
+          </option>
+          <option value="modular">
+            Mẫu 4: Tháp Viễn Thông Gọi Hàm Con (Subroutine)
+          </option>
+          <option value="types">
+            Mẫu 5: Nhà Máy Suy Luận Kiểu (double/string/bool)
+          </option>
+          <option value="dowhile">Mẫu 6: Đường Ray Vòng Lặp do-while</option>
+        </select>
+
+        <select
+          id="questSelect"
+          onchange="loadAlgorithmQuest(this.value)"
+          class="bg-[#090b14] hover:bg-[#161b2e] text-xs border border-indigo-500/35 focus:border-cyan-400/60 rounded px-2 py-1 text-slate-200 font-medium cursor-pointer transition"
+          title="Kho bài tập thực hành & Thử thách nhập môn (Tự động nạp đề bài, Testbench & Sơ đồ khung sườn)"
+        >
+          <option value="">🏆 Thử thách nhập môn (Quests)...</option>
+          <option value="quest1">Bài 1: Tính tổng S = 1 + 2 + ... + N</option>
+          <option value="quest2">Bài 2: Tìm số lớn nhất trong mảng</option>
+          <option value="quest3">Bài 3: Kiểm tra số nguyên tố</option>
+          <option value="quest4">Bài 4: Đảo ngược một số nguyên</option>
+          <option value="quest5">Bài 5: Sắp xếp nổi bọt (Bubble Sort)</option>
+        </select>
+
+        <button
+          id="btnAutoLayout"
+          onclick="autoLayout(true)"
+          class="text-xs px-2 py-1 rounded bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-400/40 text-indigo-200 font-semibold"
+          title="Quy hoạch đô thị phân tầng Sugiyama 3D"
+        >
+          🏙 Quy hoạch Đô thị 3D
+        </button>
+        <button
+          id="btnOpenSketchPad"
+          onclick="openSketchModal()"
+          class="text-xs px-2 py-1 rounded bg-gradient-to-r from-purple-500/30 to-cyan-500/30 hover:from-purple-500/45 hover:to-cyan-500/45 text-cyan-200 border border-cyan-400/50 font-semibold shadow-sm"
+          title="Vẽ phác thảo sơ đồ khối bằng chuột/bút cảm ứng và tự động nhận diện thành Đô thị 3D"
+        >
+          ✏️ Vẽ Phác Thảo
+        </button>
+        <button
+          onclick="openReverseModal()"
+          class="text-xs px-2 py-1 rounded bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-500/40 font-semibold"
+        >
+          ⚡ Dịch Code -&gt; Thành Phố
+        </button>
+        <button
+          id="btnGuideMeTour"
+          onclick="startBittoOnboardingTour()"
+          class="text-xs px-2 py-1 rounded bg-gradient-to-r from-cyan-500/30 to-emerald-500/30 hover:from-cyan-500/45 hover:to-emerald-500/45 text-cyan-100 border border-cyan-400/60 font-bold shadow-sm flex items-center gap-1"
+          title="Bitto dẫn đường hướng dẫn từng nút tính năng (Interactive Onboarding Tour)"
+        >
+          🤖 Guide Me (Tour)
+        </button>
+        <button
+          id="btnOpenManual"
+          onclick="openManual()"
+          class="text-xs px-2 py-1 rounded bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 border border-cyan-400/40 font-semibold"
+          title="Mở cẩm nang (phím F1)"
+        >
+          📖 Sổ Tay Hướng Dẫn
+        </button>
+        <button
+          onclick="exportProjectJSON()"
+          class="text-xs px-2 py-1 rounded bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40"
+        >
+          Xuất JSON
+        </button>
+        <button
+          onclick="triggerImportJSON()"
+          class="text-xs px-2 py-1 rounded bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40"
+        >
+          Nhập JSON
+        </button>
+        <button
+          id="btnFullscreen"
+          onclick="toggleFocusCanvasMode()"
+          class="text-xs px-2 py-1 rounded bg-teal-500/20 hover:bg-teal-500/30 text-teal-200 border border-teal-400/40 font-semibold"
+          title="Toàn màn hình khung vẽ Flowchart (Focus Canvas Mode)"
+        >
+          ⛶ Toàn Màn Hình
+        </button>
+        <div
+          id="audioControlGroup"
+          class="flex items-center gap-1.5 bg-[#090b14] px-2 py-0.5 rounded border border-cyan-500/35"
+          title="Hệ thống Âm thanh Tương tác (Dynamic UI Sound Effects)"
+        >
+          <button
+            id="btnAudioMuteToggle"
+            onclick="toggleAudioMute()"
+            class="text-xs px-1.5 py-0.5 rounded bg-cyan-500/20 hover:bg-cyan-500/35 text-cyan-200 border border-cyan-400/40 font-semibold mono flex items-center gap-1"
+            title="Bật / Tắt hiệu ứng âm thanh (Mute / Unmute)"
+          >
+            <span id="audioMuteIcon">🔊</span>
+            <span id="audioMuteLabel" class="text-[10px]">SFX</span>
+          </button>
+          <input
+            type="range"
+            id="audioVolumeSlider"
+            min="0"
+            max="100"
+            step="1"
+            value="38"
+            oninput="setAudioVolume(this.value)"
+            class="w-12 accent-cyan-400 cursor-pointer"
+            title="Âm lượng hiệu ứng (Mặc định: 38% êm dịu)"
+            aria-label="Âm lượng SFX"
+          />
+          <span
+            id="audioVolumeBadge"
+            class="text-[10px] mono text-cyan-300 w-7 text-right"
+            >38%</span
+          >
+        </div>
+        <input
+          type="file"
+          id="jsonFileInput"
+          accept=".json,application/json"
+          class="hidden"
+          onchange="handleImportJSONFile(event)"
+        />
+      </div>
+
+      <!-- Nút Thanh Phải nằm gọn gàng ở sát góc trên cùng bên phải -->
+      <button
+        id="btnToggleRightDrawer"
+        onclick="toggleRightDrawer()"
+        class="absolute top-1.5 right-2 z-40 text-[11px] leading-tight px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-indigo-300 border border-indigo-500/30 font-semibold transition"
+        title="Đóng/Mở thanh IDE & Testbench bên phải"
+      >
+        Thanh Phải ◨
+      </button>
+    </header>
+
+    <!-- ================= MAIN WORKSPACE ================= -->
+    <div class="flex-1 flex overflow-hidden" id="workspaceContainer">
+      <!-- LEFT SIDEBAR: ARCHITECTURAL PALETTE, INSPECTOR, LINTER & DEBUGGER -->
+      <aside
+        id="leftSidebar"
+        style="width: 295px"
+        class="bg-[#121521] border-r border-[#232942] flex flex-col justify-between p-3 shrink-0 overflow-y-auto z-20"
+      >
+        <div class="space-y-3.5">
+          <!-- Standardized Beginner-Friendly Flowchart Block Palette (v6.1) -->
+          <div>
+            <div
+              class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between"
+            >
+              <span>Khối Lệnh Sơ Đồ Khối</span>
+              <span class="text-[10px] text-cyan-400 font-normal"
+                >Nhấp để thêm khối</span
+              >
+            </div>
+            <div class="grid grid-cols-2 gap-1.5 text-xs">
+              <button
+                onclick="addNode('start', 'Start')"
+                class="p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-teal-400/40 text-teal-200 text-left font-semibold transition"
+                title="Khối Bắt đầu chương trình (Start)"
+              >
+                ● Bắt đầu (Start)
+              </button>
+              <button
+                onclick="addNode('end', 'End')"
+                class="p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-rose-400/40 text-rose-200 text-left font-semibold transition"
+                title="Khối Kết thúc chương trình (End)"
+              >
+                ■ Kết thúc (End)
+              </button>
+              <button
+                onclick="addNode('input', 'n')"
+                class="col-span-2 p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-purple-400/40 text-purple-200 text-left font-semibold transition"
+                title="Khối Nhập dữ liệu đầu vào từ bàn phím (cin)"
+              >
+                / Nhập dữ liệu (cin) /
+              </button>
+              <button
+                onclick="addNode('output', 'x')"
+                class="col-span-2 p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-emerald-400/40 text-emerald-200 text-left font-semibold transition"
+                title="Khối Xuất kết quả ra màn hình (cout)"
+              >
+                / Xuất dữ liệu (cout) /
+              </button>
+              <button
+                onclick="addNode('process', 'i = i + 1')"
+                class="col-span-2 p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-blue-400/40 text-blue-200 text-left font-semibold transition"
+                title="Khối Xử lý tính toán hoặc Gán giá trị biến"
+              >
+                [ Xử lý / Gán giá trị ]
+              </button>
+              <button
+                onclick="addNode('decision', 'i <= n')"
+                class="col-span-2 p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-amber-400/40 text-amber-200 text-left font-semibold transition"
+                title="Khối Kiểm tra điều kiện rẽ nhánh (if/else) hoặc vòng lặp (while/for)"
+              >
+                &lt; Điều kiện rẽ nhánh (if / loop) &gt;
+              </button>
+              <button
+                onclick="addNode('subroutine')"
+                class="col-span-2 p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-cyan-400/40 text-cyan-200 text-left font-semibold transition"
+                title="Khối Gọi chương trình con / Hàm con (Function)"
+              >
+                [| Gọi hàm con (Function) |]
+              </button>
+              <button
+                onclick="addNode('return', 'return s')"
+                class="p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-orange-400/40 text-orange-200 text-left font-semibold transition"
+                title="Khối Trả về giá trị từ hàm (return)"
+              >
+                ↩ Trả về (return)
+              </button>
+              <button
+                onclick="addNode('connector', 'O')"
+                class="p-2 rounded bg-[#181c2e] hover:bg-[#222842] border border-slate-400/40 text-slate-200 text-left font-semibold transition"
+                title="Điểm nối luồng trung gian (Connector)"
+              >
+                ◯ Điểm nối luồng (Connector)
+              </button>
+            </div>
+          </div>
+
+          <!-- SELECTED BUILDING INSPECTOR -->
+          <div
+            id="nodeEditor"
+            class="p-2.5 rounded bg-[#090b14] border border-indigo-500/40 hidden space-y-2"
+          >
+            <div class="flex justify-between items-center">
+              <span
+                class="text-xs font-semibold text-indigo-300 flex items-center gap-1"
+              >
+                <span>🏗 Công trình đang chọn</span>
+                <span
+                  id="selectedLayerBadge"
+                  class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 mono"
+                  >L0</span
+                >
+              </span>
+              <button
+                onclick="deleteSelectedNode()"
+                class="text-[10px] px-2 py-0.5 rounded bg-rose-500/20 hover:bg-rose-500/35 text-rose-300 border border-rose-500/30 mono"
+                title="Phím tắt: Delete hoặc Backspace"
+              >
+                🗑 Xóa (Del)
+              </button>
+            </div>
+
+            <input
+              id="nodeContentInput"
+              onfocus="captureHistoryBeforeInput()"
+              oninput="updateSelectedNodeContent(this.value)"
+              class="w-full bg-[#121521] border border-[#232942] focus:border-indigo-400 rounded px-2 py-1.5 text-xs mono text-white outline-none"
+              placeholder="Biểu thức C++..."
+            />
+
+            <!-- Quick Position Nudging & Breakpoint -->
+            <div class="flex items-center justify-between pt-0.5">
+              <label
+                class="text-xs text-slate-300 flex items-center gap-1.5 cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  id="nodeBpInput"
+                  onchange="toggleSelectedBreakpoint(this.checked)"
+                  class="accent-rose-500"
+                />
+                <span>Đặt Trạm Dừng (Breakpoint)</span>
+              </label>
+              <div class="flex items-center gap-1 text-[10px] mono">
+                <button
+                  onclick="nudgeSelectedNode(-40, 0)"
+                  class="px-1.5 py-0.5 rounded bg-[#181c2e] hover:bg-[#252b42] text-slate-300"
+                  title="Dịch sang trái"
+                >
+                  ←
+                </button>
+                <button
+                  onclick="nudgeSelectedNode(40, 0)"
+                  class="px-1.5 py-0.5 rounded bg-[#181c2e] hover:bg-[#252b42] text-slate-300"
+                  title="Dịch sang phải"
+                >
+                  →
+                </button>
+                <button
+                  onclick="nudgeSelectedNode(0, -35)"
+                  class="px-1.5 py-0.5 rounded bg-[#181c2e] hover:bg-[#252b42] text-slate-300"
+                  title="Dịch lên"
+                >
+                  ↑
+                </button>
+                <button
+                  onclick="nudgeSelectedNode(0, 35)"
+                  class="px-1.5 py-0.5 rounded bg-[#181c2e] hover:bg-[#252b42] text-slate-300"
+                  title="Dịch xuống"
+                >
+                  ↓
+                </button>
+              </div>
+            </div>
+
+            <!-- Outgoing Edges Manager -->
+            <div
+              id="selectedEdgesBox"
+              class="pt-1 border-t border-[#232942] space-y-1 text-[11px]"
+            ></div>
+          </div>
+
+          <!-- STATIC LINTER & BIG-O COMPLEXITY -->
+          <div
+            class="p-2.5 rounded bg-[#090b14] border border-[#232942] space-y-2"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-400 uppercase"
+                >Phân tích Đô thị (Linter)</span
+              >
+              <div class="flex items-center gap-1">
+                <span
+                  id="maxLayerBadge"
+                  class="px-1.5 py-0.5 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-[10px] mono"
+                  >Cao: L0</span
+                >
+                <span
+                  id="bigOBadge"
+                  class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 text-xs mono font-bold"
+                  >O(1)</span
+                >
+              </div>
+            </div>
+            <div
+              id="linterList"
+              class="space-y-1.5 text-xs max-h-32 overflow-y-auto"
+            ></div>
+          </div>
+        </div>
+
+        <!-- STEP-TRACE DEBUGGER & DATA CAPSULE CONTROLS -->
+        <div
+          class="p-2.5 rounded bg-[#090b14] border border-[#232942] space-y-2 mt-3"
+        >
+          <div class="flex items-center justify-between">
+            <span
+              class="text-xs font-semibold text-amber-300 uppercase flex items-center gap-1"
+            >
+              <span>🚀 Điều phối Viên Nang</span>
+            </span>
+            <label
+              class="text-[11px] text-cyan-300 flex items-center gap-1 cursor-pointer"
+              title="Camera tự động lướt theo viên nang dữ liệu"
+            >
+              <input
+                type="checkbox"
+                id="focusDroneToggle"
+                checked
+                class="accent-cyan-400"
+              />
+              <span>Drone Theo Dõi</span>
+            </label>
+          </div>
+
+          <div class="flex gap-1.5 items-center">
+            <span class="text-xs text-slate-400 shrink-0">Input:</span>
+            <input
+              id="traceInputBox"
+              value="28"
+              class="w-full bg-[#121521] border border-[#232942] rounded px-2 py-1 text-xs mono text-emerald-300"
+              placeholder="VD: 28 hoặc 6"
+            />
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 text-xs">
+            <button
+              onclick="startTrace()"
+              class="p-1.5 rounded bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-semibold"
+            >
+              ▶ Khởi hành / Reset
+            </button>
+            <button
+              onclick="stepNext()"
+              class="p-1.5 rounded bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 border border-blue-500/40 font-semibold"
+            >
+              ⏭ Bước kế (Step)
+            </button>
+            <button
+              id="btnAutoPlay"
+              onclick="toggleAutoPlay()"
+              class="p-1.5 rounded bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-semibold"
+            >
+              ⏩ Tự hành (Auto)
+            </button>
+            <button
+              onclick="runToBreakpoint()"
+              class="p-1.5 rounded bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 font-semibold"
+            >
+              🎯 Tới Trạm Dừng
+            </button>
+            <button
+              id="btnEmergencyKillSwitch"
+              onclick="triggerEmergencyKillSwitch()"
+              class="col-span-2 p-1.5 rounded bg-red-600/25 hover:bg-red-600/45 text-red-200 border border-red-500/60 font-bold flex items-center justify-center gap-1.5 shadow-sm"
+              title="Ngắt khẩn cấp mọi tác vụ chạy code / vòng lặp vô tận ngay lập tức (Kill Switch)"
+            >
+              <span>🛑</span><span>Ngắt Khẩn Cấp (Kill Switch)</span>
+            </button>
+          </div>
+
+          <div
+            class="flex items-center gap-2 text-[11px] text-slate-400 pt-0.5"
+          >
+            <span class="shrink-0">Tốc độ viên nang:</span>
+            <input
+              type="range"
+              id="capsuleSpeedSlider"
+              min="0.5"
+              max="4"
+              step="0.5"
+              value="1"
+              oninput="setCapsuleSpeed(this.value)"
+              class="flex-1 min-w-0 accent-cyan-400"
+              aria-label="Tốc độ viên nang"
+            />
+            <span
+              id="capsuleSpeedBadge"
+              class="px-1.5 py-0.5 rounded bg-cyan-500/20 border border-cyan-400/40 text-cyan-200 mono font-semibold"
+              >1.0x</span
+            >
+          </div>
+
+          <div
+            id="traceStatus"
+            class="text-[11px] text-cyan-300 mono truncate bg-[#121521] px-2 py-1 rounded border border-[#232942]"
+          >
+            Trạng thái: Sẵn sàng khởi hành
+          </div>
+        </div>
+      </aside>
+
+      <!-- LEFT RESIZER -->
+      <div
+        id="leftResizer"
+        class="resizer-col"
+        title="Kéo để thay đổi chiều rộng thanh bên trái"
+      ></div>
+
+      <!-- ================= CENTER: 3D ISOMETRIC CITY VIEWPORT ================= -->
+      <main class="flex-1 flex flex-col relative overflow-hidden min-w-[280px]">
+        <div
+          id="cityViewport"
+          class="flex-1 relative overflow-hidden bg-[#090b14]"
+        >
+          <!-- Three.js WebGL Canvas Mount -->
+          <div id="threeCanvasMount" class="absolute inset-0"></div>
+
+          <!-- 2D Projected HTML Overlay for Crisp Code Badges & Interactive Ports -->
+          <div
+            id="hudOverlayLayer"
+            class="absolute inset-0 pointer-events-none overflow-hidden"
+          ></div>
+
+          <!-- [UPGRADE v5.4 FEATURE 1]: Interactive Rubberband Bezier Wire & Magnetic Snap Ring -->
+          <svg id="rubberbandWireSvg" aria-hidden="true">
+            <defs>
+              <marker
+                id="rubberbandArrowHead"
+                viewBox="0 0 10 10"
+                refX="7"
+                refY="5"
+                markerWidth="6"
+                markerHeight="6"
+                orient="auto-start-reverse"
+              >
+                <path
+                  id="rubberbandArrowPath"
+                  d="M 0 1 L 10 5 L 0 9 z"
+                  fill="#22d3ee"
+                />
+              </marker>
+            </defs>
+            <path
+              id="rubberbandWireGlow"
+              d=""
+              fill="none"
+              stroke="rgba(34, 211, 238, 0.28)"
+              stroke-width="8"
+              stroke-linecap="round"
+              style="display: none"
+            />
+            <path
+              id="rubberbandWirePath"
+              d=""
+              fill="none"
+              stroke="#22d3ee"
+              stroke-width="2.8"
+              stroke-dasharray="7 4"
+              marker-end="url(#rubberbandArrowHead)"
+              style="
+                display: none;
+                filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.85));
+              "
+            />
+            <circle
+              id="rubberbandSnapRing"
+              cx="0"
+              cy="0"
+              r="14"
+              fill="rgba(34, 211, 238, 0.18)"
+              stroke="#22d3ee"
+              stroke-width="2.2"
+              style="
+                display: none;
+                filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.95));
+              "
+            />
+          </svg>
+          <!-- 20px Smart Grid Snap Live Coordinate Badge -->
+          <div id="gridSnapToast" class="hidden mono">
+            Snap 20px: (280, 180)
+          </div>
+
+          <!-- Floating Data Capsule Action Toast -->
+          <div
+            id="capsuleActionBanner"
+            class="hidden absolute top-3 left-1/2 -translate-x-1/2 z-30 px-3.5 py-1.5 rounded-full bg-[#121521]/95 border border-cyan-400/50 text-xs mono text-cyan-200 shadow-lg flex items-center gap-2"
+          >
+            <span
+              class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"
+            ></span>
+            <span id="capsuleActionText"
+              >Viên nang dữ liệu đang di chuyển...</span
+            >
+          </div>
+
+          <!-- Top-Left City Legend & Elevation Guide -->
+          <div
+            class="absolute top-3 left-3 z-20 bg-[#121521]/90 backdrop-blur border border-[#232942] rounded-lg p-2.5 text-[11px] space-y-1.5 shadow-xl max-w-[265px]"
+          >
+            <div
+              class="font-bold text-indigo-300 flex items-center justify-between"
+            >
+              <span>🗺 Bản đồ Phân Tầng Độ Cao</span>
+              <button
+                onclick="toggleLegendDetails()"
+                class="text-[10px] text-slate-400 hover:text-white"
+              >
+                Ẩn/Hiện
+              </button>
+            </div>
+            <div id="cityLegendBody" class="space-y-1 text-slate-300">
+              <div class="flex items-center gap-1.5">
+                <span
+                  class="w-2.5 h-2.5 rounded-sm bg-teal-400 inline-block"
+                ></span>
+                <span
+                  ><b>Tầng Trệt (L0):</b> Luồng chính
+                  <code class="mono text-teal-300">main()</code></span
+                >
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span
+                  class="w-2.5 h-2.5 rounded-sm bg-indigo-400 inline-block"
+                ></span>
+                <span><b>Cầu Vượt L1 (+38m):</b> Vòng lặp / Nhánh cấp 1</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span
+                  class="w-2.5 h-2.5 rounded-sm bg-amber-400 inline-block"
+                ></span>
+                <span
+                  ><b>Tháp Cao L2+ (+76m):</b> Vòng lặp / Nhánh lồng sâu</span
+                >
+              </div>
+              <div
+                class="text-[10px] text-slate-400 pt-1 border-t border-[#232942]"
+              >
+                💡 <b>Mẹo:</b> Kéo chuột trái để Xoay nhẹ • Kéo chuột phải (hoặc
+                giữ Space) để Trượt bản đồ • Cuộn chuột để Phóng to.
+              </div>
+            </div>
+          </div>
+
+          <!-- [UPGRADE v5.4 FEATURE 5]: Freely Roaming 3D Mascot BITTO & Interactive Onboarding Tour -->
+          <div id="bittoTourSpotlight"></div>
+          <svg id="bittoLaserSvg" aria-hidden="true">
+            <line
+              id="bittoLaserLine"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="0"
+              stroke="#22d3ee"
+              stroke-width="2.5"
+              stroke-dasharray="6 4"
+              style="filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.95))"
+            />
+            <circle
+              id="bittoLaserDot"
+              cx="0"
+              cy="0"
+              r="5"
+              fill="#fde047"
+              style="filter: drop-shadow(0 0 8px rgba(253, 224, 71, 0.95))"
+            />
+          </svg>
+          <!-- [GÓI 3]: Nút nổi góc màn hình thoát chế độ Focus Canvas Mode -->
+          <button
+            id="btnExitFocusCanvas"
+            onclick="toggleFocusCanvasMode(false)"
+            class="fixed top-3 right-3 z-50 px-3.5 py-2 rounded-full bg-teal-500/90 hover:bg-teal-400 text-slate-950 font-extrabold text-xs shadow-2xl border border-white/40 items-center gap-1.5 transition"
+            title="Phím tắt: ESC — Khôi phục 2 thanh công cụ bên trái và bên phải"
+          >
+            <span>🗗</span><span>Thu nhỏ giao diện (Thoát Focus)</span>
+          </button>
+
+          <!-- [GÓI 5]: Banner Đề bài Thử thách Nhập môn (Algorithm Quest Card) -->
+          <div
+            id="questBannerCard"
+            class="hidden absolute top-14 left-1/2 -translate-x-1/2 z-25 bg-[#121521]/95 backdrop-blur border border-amber-400/60 rounded-xl px-4 py-2.5 text-xs text-slate-200 shadow-2xl max-w-[560px] w-[92%]"
+          >
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span id="questBannerTitle" class="font-bold text-amber-300 mono"
+                >🏆 Thử thách #1</span
+              >
+              <div class="flex items-center gap-1.5">
+                <button
+                  onclick="askCopilotQuestHint()"
+                  class="px-2 py-0.5 rounded bg-cyan-500/25 hover:bg-cyan-500/40 text-cyan-200 border border-cyan-400/50 text-[10px] font-semibold"
+                >
+                  💬 Hỏi Bitto Gợi Ý
+                </button>
+                <button
+                  onclick="
+                    document
+                      .getElementById('questBannerCard')
+                      .classList.add('hidden')
+                  "
+                  class="text-slate-400 hover:text-white text-xs px-1"
+                  title="Ẩn đề bài"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+            <p
+              id="questBannerDesc"
+              class="text-[11.5px] text-slate-300 leading-relaxed"
+            ></p>
+          </div>
+
+          <!-- [GÓI 2]: BITTO AI COPILOT 2.0 (Tương tác Vùng Tâm Kéo Rê / Rìa Xoay 360° + Direct Chat Popup) -->
+          <div id="bittoDock">
+            <!-- Nút viên thuốc neon phát sáng trên đỉnh đầu Bitto -->
+            <div
+              class="absolute -top-5 left-2 z-30 flex items-center gap-1.5 pointer-events-auto"
+            >
+              <button
+                id="btnBittoChatPill"
+                onclick="
+                  event.stopPropagation();
+                  toggleBittoCopilotChat();
+                "
+                class="px-3 py-1 rounded-full text-[11px] font-extrabold tracking-wide flex items-center gap-1.5"
+                title="Mở khung đàm thoại trực tiếp với Bitto AI Copilot 2.0"
+              >
+                <span>💬</span><span>Trò chuyện</span>
+              </button>
+              <button
+                id="btnBittoTip"
+                onclick="
+                  event.stopPropagation();
+                  bittoShowDedicatedTip();
+                "
+                class="px-2 py-0.5 rounded-full bg-cyan-500/25 hover:bg-cyan-500/40 border border-cyan-400/50 text-[10px] text-cyan-200 mono font-bold shadow flex items-center gap-1"
+                title="Xem nhanh mẹo lập trình"
+              >
+                <span>💡</span><span>Mẹo</span>
+              </button>
+            </div>
+
+            <canvas
+              id="bittoCanvas"
+              title="Rê vào chính giữa thân Bitto (mũi tên 4 chiều) để kéo rê di chuyển • Rê ra vùng ngoài để xoay 360° hoặc click tương tác"
+              aria-label="Linh vật 3D Bitto AI Copilot 2.0"
+            ></canvas>
+
+            <div class="flex flex-col gap-1.5 mb-6">
+              <!-- Khung đàm thoại trực tiếp Bitto AI Copilot 2.0 -->
+              <div
+                id="bittoCopilotPopup"
+                role="dialog"
+                aria-label="Bitto AI Copilot 2.0"
+              >
+                <div
+                  class="flex items-center justify-between px-3 py-2 bg-[#161b2e] border-b border-cyan-500/35"
+                >
+                  <div class="flex items-center gap-1.5">
+                    <span
+                      class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"
+                    ></span>
+                    <span class="text-xs font-extrabold text-cyan-200 mono"
+                      >🤖 Bitto AI Copilot 2.0</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <button
+                      id="btnMinimizeCopilot"
+                      onclick="toggleMinimizeBittoCopilot()"
+                      class="px-1.5 py-0.5 rounded bg-[#1f2642] hover:bg-[#2c3559] text-slate-300 text-[10px] mono"
+                      title="Thu nhỏ / Mở rộng khung chat"
+                    >
+                      _
+                    </button>
+                    <button
+                      onclick="toggleBittoCopilotChat(false)"
+                      class="px-1.5 py-0.5 rounded bg-rose-500/20 hover:bg-rose-500/40 text-rose-200 text-[10px] mono"
+                      title="Đóng khung chat"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Danh sách tin nhắn cuộn -->
+                <div
+                  id="bittoCopilotBody"
+                  class="sel-text flex-1 overflow-y-auto p-3 space-y-2.5 flex flex-col bg-[#0b0e1a]"
+                ></div>
+
+                <!-- Các nút chức năng nhanh (Quick Prompts) -->
+                <div
+                  id="bittoCopilotQuickBar"
+                  class="px-2.5 py-1.5 bg-[#111526] border-t border-[#232942] flex flex-wrap gap-1"
+                >
+                  <button
+                    onclick="sendBittoQuickPrompt('Gợi ý thuật toán bài này')"
+                    class="px-2 py-1 rounded-full bg-cyan-500/15 hover:bg-cyan-500/30 border border-cyan-400/40 text-[10px] text-cyan-200 font-semibold transition"
+                  >
+                    💡 Gợi ý thuật toán bài này
+                  </button>
+                  <button
+                    onclick="
+                      sendBittoQuickPrompt(
+                        'Phân tích độ phức tạp Big-O chi tiết',
+                      )
+                    "
+                    class="px-2 py-1 rounded-full bg-purple-500/15 hover:bg-purple-500/30 border border-purple-400/40 text-[10px] text-purple-200 font-semibold transition"
+                  >
+                    📊 Phân tích độ phức tạp Big-O chi tiết
+                  </button>
+                  <button
+                    onclick="
+                      sendBittoQuickPrompt('Sửa lỗi sơ đồ / code này giúp tôi')
+                    "
+                    class="px-2 py-1 rounded-full bg-emerald-500/15 hover:bg-emerald-500/30 border border-emerald-400/40 text-[10px] text-emerald-200 font-semibold transition"
+                  >
+                    🛠 Sửa lỗi sơ đồ / code này giúp tôi
+                  </button>
+                </div>
+
+                <!-- Ô nhập liệu câu hỏi -->
+                <div
+                  id="bittoCopilotInputRow"
+                  class="p-2 bg-[#14182b] border-t border-[#232942] flex items-center gap-1.5"
+                >
+                  <input
+                    id="bittoCopilotInput"
+                    type="text"
+                    onkeydown="
+                      if (event.key === 'Enter') submitBittoCopilotQuestion();
+                    "
+                    placeholder="Hỏi Bitto về sơ đồ khối, C++, vòng lặp..."
+                    class="flex-1 bg-[#090b14] border border-[#283152] focus:border-cyan-400 rounded-lg px-2.5 py-1.5 text-xs text-white outline-none"
+                  />
+                  <button
+                    onclick="submitBittoCopilotQuestion()"
+                    class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold shrink-0 shadow"
+                  >
+                    Gửi
+                  </button>
+                </div>
+              </div>
+
+              <div
+                id="bittoBubble"
+                class="off"
+                data-mood="happy"
+                role="status"
+              ></div>
+              <div
+                id="bittoTourControls"
+                class="hidden items-center gap-1 bg-[#0d101d]/95 border border-cyan-400/60 rounded-lg px-2 py-1 text-[10px] mono shadow-xl"
+              >
+                <span
+                  id="bittoTourStepBadge"
+                  class="text-cyan-300 font-bold mr-1"
+                  >1/7</span
+                >
+                <button
+                  onclick="prevBittoTourStep()"
+                  class="px-1.5 py-0.5 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-200"
+                >
+                  ⏮ Trước
+                </button>
+                <button
+                  onclick="nextBittoTourStep()"
+                  class="px-1.5 py-0.5 rounded bg-cyan-500/30 hover:bg-cyan-500/45 text-cyan-100 font-bold"
+                >
+                  Tiếp ⏭
+                </button>
+                <button
+                  onclick="stopBittoOnboardingTour()"
+                  class="px-1.5 py-0.5 rounded bg-rose-500/25 hover:bg-rose-500/40 text-rose-200 ml-1"
+                >
+                  ✕ Đóng
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom-Right 3D Camera & Mode Controls -->
+          <div
+            class="absolute bottom-3 right-3 z-20 flex items-center gap-1.5 bg-[#121521]/95 backdrop-blur border border-[#232942] rounded-full px-3 py-1.5 text-xs shadow-xl"
+          >
+            <button
+              id="btnViewMode"
+              onclick="toggleCameraProjectionAngle()"
+              class="px-3 py-1 rounded-full bg-indigo-500/25 hover:bg-indigo-500/40 text-indigo-200 border border-indigo-400/50 font-semibold text-[11px] transition"
+              title="Chuyển đổi mượt mà qua lại giữa 🌐 Chế độ 3D (Xoay 360°) và 📐 Chế độ 2D (Mặt bằng)"
+            >
+              🌐 Chế độ 3D / 📐 Chế độ 2D (Đang ở: 3D)
+            </button>
+            <button
+              onclick="zoomCamera(1.18)"
+              class="w-7 h-7 flex items-center justify-center rounded-full bg-[#1b2033] hover:bg-[#252b42] text-slate-200 mono font-bold"
+              title="Phóng to"
+            >
+              +
+            </button>
+            <button
+              id="zoomPercentBadge"
+              onclick="resetCameraView()"
+              class="px-2 py-0.5 rounded-full bg-[#090b14] border border-cyan-500/40 text-cyan-300 text-[11px] mono font-bold"
+              title="Tỷ lệ thu phóng hiện tại (Nhấp để Reset về 100% và căn giữa sơ đồ)"
+            >
+              100%
+            </button>
+            <button
+              onclick="zoomCamera(0.85)"
+              class="w-7 h-7 flex items-center justify-center rounded-full bg-[#1b2033] hover:bg-[#252b42] text-slate-200 mono font-bold"
+              title="Thu nhỏ"
+            >
+              -
+            </button>
+            <button
+              onclick="resetCameraView()"
+              class="px-2.5 py-1 rounded-full bg-[#1b2033] hover:bg-[#252b42] text-cyan-300 text-[11px] font-semibold"
+              title="Đưa camera về trung tâm thành phố"
+            >
+              ⟲ Tâm Đô Thị
+            </button>
+          </div>
+        </div>
+
+        <!-- BOTTOM RESIZER -->
+        <div
+          id="bottomResizer"
+          class="resizer-row"
+          title="Kéo để thay đổi chiều cao bảng RAM phía dưới"
+        ></div>
+
+        <!-- BOTTOM BAR: SCALAR RAM, 1D VOXEL ARRAY WATCH & CONSOLE -->
+        <div
+          id="bottomRamPanel"
+          style="height: 172px"
+          class="bg-[#121521] border-t border-[#232942] p-3 grid grid-cols-12 gap-3 shrink-0 overflow-y-auto z-20"
+        >
+          <!-- Scalar RAM -->
+          <div
+            class="col-span-4 bg-[#090b14] border border-[#232942] rounded p-2 flex flex-col"
+          >
+            <div
+              class="text-xs font-semibold text-slate-400 mb-1.5 flex justify-between"
+            >
+              <span>⚡ TRẠM BIẾN ĐƠN (RAM)</span>
+              <span id="stepCounterBadge" class="text-amber-300 mono"
+                >Step: 0</span
+              >
+            </div>
+            <div
+              id="scalarRamBox"
+              class="grid grid-cols-2 gap-1.5 text-xs mono overflow-y-auto"
+            ></div>
+          </div>
+
+          <!-- 1D Array Grid + Synced with 3D Voxel Warehouse -->
+          <div
+            class="col-span-5 bg-[#090b14] border border-[#232942] rounded p-2 flex flex-col"
+          >
+            <div
+              class="text-xs font-semibold text-slate-400 mb-1.5 flex items-center justify-between"
+            >
+              <span>📦 KHO BỘ NHỚ MẢNG 1D &amp; MA TRẬN 2D (ĐỒNG BỘ 3D)</span>
+              <span class="text-[10px] text-cyan-400 mono"
+                >Khay Memory + Tia Con Trỏ 3D</span
+              >
+            </div>
+            <div
+              id="arrayRamBox"
+              class="flex-1 flex items-center gap-2 overflow-x-auto px-1"
+            ></div>
+          </div>
+
+          <!-- Program Output Console + VS Code Integrated Terminal Error Scanner (Feature 4) -->
+          <div
+            id="terminalConsolePanel"
+            class="col-span-3 bg-[#090b14] border border-[#232942] rounded p-2 flex flex-col"
+          >
+            <div
+              class="text-xs font-semibold text-slate-400 mb-1 flex items-center justify-between gap-1"
+            >
+              <div class="flex items-center gap-1.5 truncate">
+                <span>🖥 TERMINAL / STDOUT</span>
+                <span
+                  id="terminalErrorCountBadge"
+                  class="hidden px-1.5 py-0.2 rounded bg-rose-500/20 border border-rose-500/50 text-[10px] text-rose-400 font-bold mono"
+                  >0 lỗi</span
+                >
+              </div>
+              <div class="flex items-center gap-1 shrink-0">
+                <button
+                  id="btnScanTerminalErrors"
+                  onclick="runTerminalSemanticScanner(true)"
+                  class="px-1.5 py-0.5 rounded bg-[#1b2033] hover:bg-[#252b42] text-[10px] text-cyan-300 border border-cyan-500/30 mono"
+                  title="Quét lỗi ngữ nghĩa thời gian thực (chia cho 0, biến chưa khởi tạo, vòng lặp vô hạn, test fail)"
+                >
+                  🔍 Scan
+                </button>
+                <button
+                  id="btnToggleTerminalCollapse"
+                  onclick="toggleTerminalCollapse()"
+                  class="px-1.5 py-0.5 rounded bg-[#1b2033] hover:bg-[#252b42] text-[10px] text-slate-300 border border-[#232942] mono"
+                  title="Thu gọn / Mở rộng Terminal"
+                >
+                  ▾
+                </button>
+                <button
+                  id="btnToggleTerminalFullscreen"
+                  onclick="toggleTerminalFullscreen()"
+                  class="px-1.5 py-0.5 rounded bg-[#1b2033] hover:bg-[#252b42] text-[10px] text-indigo-300 border border-indigo-500/30 mono"
+                  title="Phóng to toàn màn hình Terminal"
+                >
+                  ⛶
+                </button>
+              </div>
+            </div>
+            <div
+              id="stdoutBox"
+              class="flex-1 text-xs mono text-emerald-400 overflow-y-auto whitespace-pre-wrap"
+            ></div>
+            <div
+              id="terminalDiagnosticsBox"
+              class="mt-1 pt-1 border-t border-[#1e243d] text-[11px] mono space-y-0.5 max-h-20 overflow-y-auto hidden"
+            ></div>
+          </div>
+        </div>
+      </main>
+
+      <!-- RIGHT RESIZER -->
+      <div
+        id="rightResizer"
+        class="resizer-col"
+        title="Kéo để thay đổi chiều rộng thanh bên phải"
+      ></div>
+
+      <!-- ================= RIGHT SIDEBAR: COMPILER & TESTBENCH ================= -->
+      <aside
+        id="rightSidebar"
+        style="width: 375px"
+        class="bg-[#121521] border-l border-[#232942] flex flex-col shrink-0 z-20"
+      >
+        <!-- [GÓI 4]: Output Language & Format Selector Tabs ([C++], [C], [Python], [Mermaid], [TikZ]) -->
+        <div
+          class="p-2 border-b border-[#232942] flex items-center justify-between gap-1 flex-wrap"
+        >
+          <div class="flex gap-1 text-xs flex-wrap">
+            <button
+              onclick="switchOutTab('cpp')"
+              id="outTab_cpp"
+              class="px-2.5 py-1 rounded bg-indigo-500/25 text-indigo-200 border border-indigo-400/50 font-bold"
+              title="Sinh mã C++17/C++20 chuẩn giáo dục kèm chú thích từng dòng"
+            >
+              C++
+            </button>
+            <button
+              onclick="switchOutTab('c')"
+              id="outTab_c"
+              class="px-2.5 py-1 rounded text-slate-400 hover:bg-[#1b2033]"
+              title="Sinh mã ngôn ngữ C chuẩn (stdio.h, scanf, printf)"
+            >
+              C
+            </button>
+            <button
+              onclick="switchOutTab('python')"
+              id="outTab_python"
+              class="px-2.5 py-1 rounded text-slate-400 hover:bg-[#1b2033]"
+              title="Sinh mã Python 3 trực quan (input, print, range)"
+            >
+              Python
+            </button>
+            <button
+              onclick="switchOutTab('mermaid')"
+              id="outTab_mermaid"
+              class="px-2 py-1 rounded text-slate-400 hover:bg-[#1b2033]"
+            >
+              Mermaid.js
+            </button>
+            <button
+              onclick="switchOutTab('tikz')"
+              id="outTab_tikz"
+              class="px-2 py-1 rounded text-slate-400 hover:bg-[#1b2033]"
+            >
+              LaTeX TikZ
+            </button>
+          </div>
+          <label
+            class="text-xs flex items-center gap-1 text-cyan-300 cursor-pointer shrink-0"
+          >
+            <input
+              type="checkbox"
+              id="optForToggle"
+              checked
+              onchange="compileAll()"
+              class="accent-cyan-400"
+            />
+            <span>Gộp vòng for</span>
+          </label>
+        </div>
+
+        <!-- Code Editor (IDE) with VS Code Dark Themes, Live Syntax Layer, Collapse & Fullscreen (Feature 4) -->
+        <div
+          id="idePanelContainer"
+          class="flex-1 min-h-0 flex flex-col ide-theme-tokyonight"
+        >
+          <!-- VS Code Header Bar -->
+          <div
+            class="flex items-center justify-between px-2.5 py-1 bg-[#141829] border-b border-[#232942] text-[11px]"
+          >
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+              <span
+                id="ideFileNameLabel"
+                class="mono font-semibold text-slate-200"
+                >main.cpp • VS Code IDE</span
+              >
+              <select
+                id="vsThemeSelect"
+                onchange="switchIdeTheme(this.value)"
+                class="bg-[#090b14] text-[10px] border border-[#2e3657] rounded px-1.5 py-0.5 text-cyan-300 mono"
+                title="Chọn giao diện màu VS Code Extension Theme"
+              >
+                <option value="tokyonight">Theme: Tokyo Night</option>
+                <option value="onedark">Theme: One Dark Pro</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button
+                id="btnIdeCollapse"
+                onclick="toggleIdeCollapse()"
+                class="px-1.5 py-0.5 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-300 border border-[#2e3657] text-[10px] mono"
+                title="Thu gọn / Mở rộng khung soạn thảo IDE"
+              >
+                ▾ Thu gọn
+              </button>
+              <button
+                id="btnIdeFullscreen"
+                onclick="toggleIdeFullscreen()"
+                class="px-2 py-0.5 rounded bg-indigo-500/20 hover:bg-indigo-500/35 text-indigo-200 border border-indigo-400/40 text-[10px] mono font-semibold"
+                title="Phóng to / Thu nhỏ khung IDE C++"
+              >
+                ⛶ Fullscreen
+              </button>
+              <button
+                id="btnIdeExitFullscreen"
+                onclick="toggleIdeFullscreen(false)"
+                class="items-center gap-1 px-2.5 py-1 rounded bg-gradient-to-r from-rose-600 to-orange-500 hover:from-rose-500 hover:to-orange-400 text-white border border-rose-300/80 text-[11px] mono font-extrabold shadow-lg transition"
+                title="Thoát chế độ Toàn màn hình IDE (Phím tắt: ESC)"
+              >
+                ✕ Thoát Fullscreen (ESC)
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="ideToolbar"
+            class="flex items-center gap-1.5 px-2 py-1.5 border-b border-[#232942] text-[11px] flex-wrap"
+          >
+            <button
+              id="btnIdeSync3D"
+              onclick="ideSyncTo3D()"
+              class="px-2 py-1 rounded bg-purple-500/20 hover:bg-purple-500/35 text-purple-200 border border-purple-400/40 font-semibold"
+              title="Dịch mã C++ trong khung thành sơ đồ khối và dựng lại thành phố 3D"
+            >
+              ⚡ Cập Nhật Lên 3D
+            </button>
+            <button
+              id="btnIdeSyncAutoRun"
+              onclick="ideSyncAndAutoRun()"
+              class="px-2.5 py-1 rounded bg-amber-500/25 hover:bg-amber-500/40 text-amber-200 border border-amber-400/50 font-bold shadow"
+              title="Parse C++ sang 3D, quy hoạch phân tầng và kích hoạt Viên Nang Tự Hành ngay lập tức (Ctrl+Shift+Enter)"
+            >
+              ⚡ Cập Nhật &amp; Tự Hành
+            </button>
+            <button
+              id="btnIdeRunCode"
+              onclick="ideRunCode()"
+              class="px-2 py-1 rounded bg-emerald-500/20 hover:bg-emerald-500/35 text-emerald-200 border border-emerald-400/40 font-semibold"
+              title="Chạy mã với Input ở ô bên trái (Ctrl+Enter)"
+            >
+              ▶ Chạy Code (Run)
+            </button>
+            <span
+              id="ideSyncBadge"
+              class="mono text-[10px] text-slate-500 ml-auto"
+            ></span>
+            <button
+              id="btnCopyCode"
+              onclick="copyOutputCode()"
+              class="px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-200 border border-[#232942]"
+            >
+              Copy Code
+            </button>
+          </div>
+          <div class="ide-wrap">
+            <div id="ideGutter" class="ide-gutter" aria-hidden="true"></div>
+            <div class="ide-main">
+              <div id="ideActiveLineHL"></div>
+              <div id="ideHL"></div>
+              <pre id="ideSyntaxHighlightLayer" aria-hidden="true"></pre>
+              <textarea
+                id="codeOutputBox"
+                class="syntax-overlay-active"
+                spellcheck="false"
+                wrap="off"
+                autocomplete="off"
+                autocapitalize="off"
+                aria-label="Trình soạn thảo C++"
+              ></textarea>
+              <!-- VS Code IntelliSense Autocomplete Popup -->
+              <div id="ideAutocompletePopup" class="hidden"></div>
+            </div>
+          </div>
+          <!-- VS Code Bottom Status Bar -->
+          <div
+            id="ideStatusBar"
+            class="px-2.5 py-0.5 bg-[#121626] border-t border-[#232942] flex items-center justify-between text-[10px] mono text-slate-400"
+          >
+            <span id="ideCursorPosText">Ln 1, Col 1 • Fira Code</span>
+            <span id="ideLinterStatusText" class="text-emerald-400"
+              >✓ C++17 • 0 lỗi ngữ nghĩa</span
+            >
+          </div>
+        </div>
+
+        <!-- [UPGRADE FEATURE 3]: Resizable Handle for Testbench -->
+        <div
+          id="testbenchResizer"
+          title="Kéo lên/xuống để thay đổi chiều cao cửa sổ Chấm Test Tự Động (Testbench)"
+        ></div>
+
+        <!-- [UPGRADE FEATURE 3]: Automated Testbench (Resizable & Collapsible) -->
+        <div
+          id="testbenchPanel"
+          style="height: 256px"
+          class="border-t border-[#232942] p-3 flex flex-col bg-[#121521] shrink-0 transition-all"
+        >
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-semibold text-emerald-300 uppercase"
+                >Chấm Test Tự Động (Testbench)</span
+              >
+              <button
+                id="btnToggleTestbench"
+                onclick="toggleTestbenchCollapse()"
+                class="text-[10px] px-2 py-0.5 rounded bg-[#1b2033] hover:bg-[#252b42] text-cyan-300 border border-cyan-500/30 mono font-semibold"
+                title="Thu gọn / Mở rộng bảng Testbench"
+              >
+                ▾ Ẩn
+              </button>
+            </div>
+            <div class="flex items-center gap-1">
+              <button
+                onclick="clearAllTestCases()"
+                class="text-[11px] px-2 py-1 rounded bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30"
+              >
+                Xóa hết
+              </button>
+              <button
+                id="btnRunTests"
+                onclick="runAllTests()"
+                class="text-xs px-2.5 py-1 rounded bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-semibold"
+              >
+                Chạy Test
+              </button>
+            </div>
+          </div>
+          <div id="testbenchBody" class="flex-1 min-h-0 flex flex-col">
+            <div
+              id="testCaseList"
+              class="flex-1 space-y-1.5 overflow-y-auto text-xs mono"
+            ></div>
+            <div class="mt-2 pt-2 border-t border-[#232942] flex gap-1.5">
+              <input
+                id="newTestIn"
+                onkeydown="if (event.key === 'Enter') addTestCase();"
+                placeholder="Input (VD: 6)"
+                class="w-1/2 bg-[#090b14] border border-[#232942] rounded px-2 py-1 text-xs mono text-white"
+              />
+              <input
+                id="newTestOut"
+                onkeydown="if (event.key === 'Enter') addTestCase();"
+                placeholder="Kỳ vọng (VD: 6)"
+                class="w-1/2 bg-[#090b14] border border-[#232942] rounded px-2 py-1 text-xs mono text-white"
+              />
+              <button
+                onclick="addTestCase()"
+                class="px-2.5 py-1 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs shrink-0"
+              >
+                + Thêm
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ================= MODAL: AST REVERSE COMPILER (CODE -> 3D CITY) ================= -->
+    <div
+      id="reverseModal"
+      class="fixed inset-0 bg-black/75 hidden items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#121521] border border-[#232942] rounded-xl w-[640px] max-w-[95vw] p-4 space-y-3 shadow-2xl"
+      >
+        <div class="flex justify-between items-center">
+          <h3 class="text-sm font-bold text-purple-300 flex items-center gap-2">
+            <span
+              >⚡ AST Reverse Compiler v5: Xây Thành Phố 3D từ Code C++</span
+            >
+          </h3>
+          <button
+            onclick="closeReverseModal()"
+            class="text-slate-400 hover:text-white text-sm"
+          >
+            ✕
+          </button>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Bộ phân tích cú pháp
+          <span class="text-indigo-300 font-semibold"
+            >Recursive Descent AST</span
+          >
+          tự động nhận diện cấu trúc lệnh (<code class="text-purple-300"
+            >cin</code
+          >, <code class="text-purple-300">cout</code>,
+          <code class="text-purple-300">if/else</code>,
+          <code class="text-purple-300">for</code>,
+          <code class="text-purple-300">while</code>,
+          <code class="text-purple-300">do-while</code>) và quy hoạch độ cao
+          công trình theo cấp độ lồng nhau.
+        </p>
+        <div class="flex gap-1.5 text-[11px] flex-wrap">
+          <button
+            onclick="loadSampleReverseCode('for_ifelse')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-cyan-300 border border-cyan-500/30"
+          >
+            Mẫu 1: Vòng for + if-else
+          </button>
+          <button
+            onclick="loadSampleReverseCode('dowhile')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-amber-300 border border-amber-500/30"
+          >
+            Mẫu 2: Vòng lặp do-while
+          </button>
+          <button
+            onclick="loadSampleReverseCode('nested')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-emerald-300 border border-emerald-500/30"
+          >
+            Mẫu 3: Rẽ nhánh if-else 2 tầng
+          </button>
+          <button
+            onclick="loadSampleReverseCode('break_continue')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-rose-300 border border-rose-500/30"
+          >
+            Mẫu 4: Vòng lặp có break &amp; continue
+          </button>
+        </div>
+        <textarea
+          id="cppPasteBox"
+          rows="10"
+          class="w-full bg-[#090b14] border border-[#232942] rounded p-2.5 text-xs mono text-slate-200 focus:outline-none focus:border-purple-400"
+        >
+cin >> n;
+tong = 0;
+for (i = 1; i <= n; i++) {
+    if (n % i == 0) {
+        tong += i;
+    } else {
+        skipped = i;
+    }
+}
+cout << tong;</textarea
+        >
+        <div class="flex justify-end gap-2">
+          <button
+            onclick="closeReverseModal()"
+            class="text-xs px-3 py-1.5 rounded bg-[#1b2033] hover:bg-[#252b42]"
+          >
+            Hủy
+          </button>
+          <button
+            onclick="parseCppToFlowchart()"
+            class="text-xs px-3.5 py-1.5 rounded bg-purple-600 hover:bg-purple-500 text-white font-semibold"
+          >
+            🏙 Khởi tạo Thành Phố 3D
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MODAL: ADD NEW DISTRICT / FUNCTION TAB ================= -->
+    <div
+      id="functionModal"
+      class="fixed inset-0 bg-black/75 hidden items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#121521] border border-[#232942] rounded-xl w-[430px] max-w-[92vw] p-4 space-y-3 shadow-2xl"
+      >
+        <div class="flex justify-between items-center">
+          <h3 class="text-sm font-bold text-cyan-300">
+            Thêm Quận Quy Hoạch / Hàm Con Mới
+          </h3>
+          <button
+            onclick="closeFunctionModal()"
+            class="text-slate-400 hover:text-white text-sm"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="space-y-2 text-xs">
+          <label class="block text-slate-400"
+            >Tên Quận / Hàm (VD:
+            <code class="text-cyan-300">kiemTraNguyenTo</code>):</label
+          >
+          <input
+            id="newFuncNameInput"
+            value="quan2"
+            class="w-full bg-[#090b14] border border-[#232942] rounded px-2.5 py-1.5 text-xs mono text-white"
+          />
+          <label class="block text-slate-400"
+            >Tham số đầu vào (VD:
+            <code class="text-cyan-300">int x</code>):</label
+          >
+          <input
+            id="newFuncParamInput"
+            value="int x"
+            class="w-full bg-[#090b14] border border-[#232942] rounded px-2.5 py-1.5 text-xs mono text-white"
+          />
+        </div>
+        <div class="flex justify-end gap-2 pt-1">
+          <button
+            onclick="closeFunctionModal()"
+            class="text-xs px-3 py-1.5 rounded bg-[#1b2033] hover:bg-[#252b42]"
+          >
+            Hủy
+          </button>
+          <button
+            onclick="confirmAddFunctionTab()"
+            class="text-xs px-3.5 py-1.5 rounded bg-cyan-600 hover:bg-cyan-500 text-white font-semibold"
+          >
+            Tạo Quận Mới
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MODAL: SỔ TAY HƯỚNG DẪN (MANDATORY ONBOARDING) ================= -->
+    <div
+      id="manualModal"
+      class="fixed inset-0 bg-black/80 flex items-center justify-center z-[100] backdrop-blur-sm"
+      onclick="if (event.target === this) tryCloseManualModal();"
+    >
+      <div
+        class="bg-[#121521] border border-[#232942] rounded-xl w-[820px] max-w-[96vw] h-[86vh] flex flex-col shadow-2xl"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Sổ tay hướng dẫn"
+      >
+        <div
+          class="flex items-center justify-between px-4 py-3 border-b border-[#232942]"
+        >
+          <div class="font-bold text-cyan-200 text-sm flex items-center gap-2">
+            <img
+              src="data:image/png;base64,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"
+              alt="AlgoFlow Logo"
+              class="brand-logo-img"
+            />
+            <span>📖 Sổ Tay Hướng Dẫn • AlgoFlow Studio v6.1</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span
+              id="manualMandatoryBadge"
+              class="px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-200 text-[11px] font-semibold"
+            >
+              📌 Bắt buộc đọc Sổ tay &amp; nhấn nút xác nhận bên dưới để bắt đầu
+            </span>
+            <button
+              id="btnManualTopClose"
+              onclick="tryCloseManualModal()"
+              class="hidden text-slate-400 hover:text-white text-sm px-1.5 py-0.5 rounded hover:bg-[#1b2033]"
+              title="Đóng (ESC)"
+              aria-label="Đóng sổ tay"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex gap-1.5 px-4 py-2 border-b border-[#232942] text-[11px] flex-wrap"
+        >
+          <button
+            onclick="manualGo('mn1')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-200"
+          >
+            Thành phố Giải thuật
+          </button>
+          <button
+            onclick="manualGo('mn2')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-200"
+          >
+            Các khối kiến trúc
+          </button>
+          <button
+            onclick="manualGo('mn3')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-200"
+          >
+            Gỡ lỗi &amp; kiểm thử
+          </button>
+          <button
+            onclick="manualGo('mn4')"
+            class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-200"
+          >
+            Phím tắt &amp; thao tác
+          </button>
+        </div>
+        <div
+          id="manualBody"
+          class="sel-text flex-1 overflow-y-auto px-5 py-4 space-y-5 text-[12.5px] leading-relaxed text-slate-300"
+        >
+          <!-- MỤC 1: QUY TRÌNH 3 BƯỚC TRỰC QUAN -->
+          <section
+            id="mn1"
+            class="bg-[#0b0e1a] border border-[#232942] rounded-xl p-4"
+          >
+            <h3
+              class="flex items-center gap-2 text-cyan-300 font-bold text-sm mb-3"
+            >
+              <span>1. Quy trình 3 bước sử dụng AlgoFlow Studio</span>
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <!-- Bước 1 -->
+              <div
+                class="bg-[#121626] border border-[#283152] rounded-lg p-3 flex flex-col items-center text-center"
+              >
+                <svg viewBox="0 0 180 76" class="w-full h-20 mb-2">
+                  <rect
+                    x="12"
+                    y="16"
+                    width="66"
+                    height="36"
+                    rx="8"
+                    fill="#1a1e2e"
+                    stroke="#2ac3de"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="45"
+                    y="38"
+                    fill="#cffafe"
+                    font-size="10"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    + Khối
+                  </text>
+                  <path
+                    d="M 84 34 L 112 34"
+                    stroke="#7aa2f7"
+                    stroke-width="2"
+                    stroke-dasharray="4 3"
+                  />
+                  <polygon points="112,30 120,34 112,38" fill="#7aa2f7" />
+                  <circle
+                    cx="144"
+                    cy="34"
+                    r="18"
+                    fill="#1e293b"
+                    stroke="#34d399"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="144"
+                    y="38"
+                    fill="#6ee7b7"
+                    font-size="9"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    +Out➔In
+                  </text>
+                </svg>
+                <div class="font-bold text-white text-xs mb-1">
+                  Bước 1: Lắp ghép Sơ đồ
+                </div>
+                <p class="text-[11px] text-slate-400">
+                  Bấm chọn khối ở <b>Thanh Trái</b>, kéo dây từ cổng
+                  <code class="text-cyan-300">+Out / +True</code> thả vào
+                  <code class="text-emerald-300">➔In</code>.
+                </p>
+              </div>
+              <!-- Bước 2 -->
+              <div
+                class="bg-[#121626] border border-[#283152] rounded-lg p-3 flex flex-col items-center text-center"
+              >
+                <svg viewBox="0 0 180 76" class="w-full h-20 mb-2">
+                  <rect
+                    x="16"
+                    y="14"
+                    width="148"
+                    height="48"
+                    rx="8"
+                    fill="#0f172a"
+                    stroke="#6366f1"
+                    stroke-width="1.8"
+                  />
+                  <circle cx="38" cy="38" r="9" fill="#2ac3de" />
+                  <circle
+                    cx="38"
+                    cy="38"
+                    r="14"
+                    fill="none"
+                    stroke="#67e8f9"
+                    stroke-width="1.5"
+                    stroke-dasharray="3 2"
+                  />
+                  <path
+                    d="M 56 38 L 116 38"
+                    stroke="#2ac3de"
+                    stroke-width="2.5"
+                  />
+                  <rect
+                    x="122"
+                    y="24"
+                    width="28"
+                    height="28"
+                    rx="5"
+                    fill="#1e293b"
+                    stroke="#f59e0b"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="136"
+                    y="42"
+                    fill="#fcd34d"
+                    font-size="9"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    RAM
+                  </text>
+                </svg>
+                <div class="font-bold text-white text-xs mb-1">
+                  Bước 2: Chạy Viên Nang
+                </div>
+                <p class="text-[11px] text-slate-400">
+                  Nhập <b>Input</b>, bấm <b>▶ Khởi hành</b> hoặc
+                  <b>⏭ Bước kế</b> để xem viên nang chạy và biến đổi trong RAM.
+                </p>
+              </div>
+              <!-- Bước 3 -->
+              <div
+                class="bg-[#121626] border border-[#283152] rounded-lg p-3 flex flex-col items-center text-center"
+              >
+                <svg viewBox="0 0 180 76" class="w-full h-20 mb-2">
+                  <rect
+                    x="14"
+                    y="12"
+                    width="90"
+                    height="52"
+                    rx="6"
+                    fill="#090b14"
+                    stroke="#8b5cf6"
+                    stroke-width="1.8"
+                  />
+                  <text
+                    x="24"
+                    y="29"
+                    fill="#c084fc"
+                    font-size="9"
+                    font-family="monospace"
+                  >
+                    C++ / C / Py
+                  </text>
+                  <line
+                    x1="24"
+                    y1="38"
+                    x2="88"
+                    y2="38"
+                    stroke="#38bdf8"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="24"
+                    y1="48"
+                    x2="72"
+                    y2="48"
+                    stroke="#9ece6a"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="114"
+                    y="20"
+                    width="52"
+                    height="36"
+                    rx="6"
+                    fill="#064e3b"
+                    stroke="#10b981"
+                    stroke-width="1.8"
+                  />
+                  <text
+                    x="140"
+                    y="42"
+                    fill="#6ee7b7"
+                    font-size="10"
+                    font-weight="bold"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    ✓ PASS
+                  </text>
+                </svg>
+                <div class="font-bold text-white text-xs mb-1">
+                  Bước 3: Xem Code &amp; Chấm Test
+                </div>
+                <p class="text-[11px] text-slate-400">
+                  Xem mã <b>C++ / C / Python</b> tự sinh ở <b>Thanh Phải</b> và
+                  bấm <b>Chạy Test</b> để kiểm tra tự động.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- MỤC 2: HÌNH MINH HỌA CÁC KHỐI SƠ ĐỒ KHỐI (FLOWCHART BLOCKS) -->
+          <section
+            id="mn2"
+            class="bg-[#0b0e1a] border border-[#232942] rounded-xl p-4"
+          >
+            <h3
+              class="flex items-center gap-2 text-cyan-300 font-bold text-sm mb-3"
+            >
+              <span>2. Nhận diện nhanh 6 Khối Kiến Trúc Sơ Đồ Khối</span>
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              <!-- Start / End -->
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-2.5 flex items-center gap-2.5"
+              >
+                <svg viewBox="0 0 64 44" class="w-14 h-10 shrink-0">
+                  <rect
+                    x="6"
+                    y="10"
+                    width="52"
+                    height="24"
+                    rx="12"
+                    fill="#1a1e2e"
+                    stroke="#2ac3de"
+                    stroke-width="2.2"
+                  />
+                  <text
+                    x="32"
+                    y="25"
+                    fill="#67e8f9"
+                    font-size="9"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    START
+                  </text>
+                </svg>
+                <div>
+                  <div class="text-xs font-bold text-teal-300">Start / End</div>
+                  <div class="text-[11px] text-slate-400">
+                    Viên nang bo tròn: Bắt đầu / Kết thúc.
+                  </div>
+                </div>
+              </div>
+              <!-- Input / Output -->
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-2.5 flex items-center gap-2.5"
+              >
+                <svg viewBox="0 0 64 44" class="w-14 h-10 shrink-0">
+                  <polygon
+                    points="14,10 58,10 50,34 6,34"
+                    fill="#1a1e2e"
+                    stroke="#bb9af7"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="32"
+                    y="25"
+                    fill="#e9d5ff"
+                    font-size="8.5"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    cin/cout
+                  </text>
+                </svg>
+                <div>
+                  <div class="text-xs font-bold text-purple-300">
+                    Cảng Nhập / Xuất
+                  </div>
+                  <div class="text-[11px] text-slate-400">
+                    Nhập <code class="mono">cin</code> hoặc in
+                    <code class="mono">cout</code>.
+                  </div>
+                </div>
+              </div>
+              <!-- Process -->
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-2.5 flex items-center gap-2.5"
+              >
+                <svg viewBox="0 0 64 44" class="w-14 h-10 shrink-0">
+                  <rect
+                    x="8"
+                    y="9"
+                    width="48"
+                    height="26"
+                    rx="4"
+                    fill="#1a1e2e"
+                    stroke="#7aa2f7"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="32"
+                    y="25"
+                    fill="#bfdbfe"
+                    font-size="8.5"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    S += i
+                  </text>
+                </svg>
+                <div>
+                  <div class="text-xs font-bold text-blue-300">
+                    Nhà Máy Xử Lý
+                  </div>
+                  <div class="text-[11px] text-slate-400">
+                    Gán biến, tính toán biểu thức.
+                  </div>
+                </div>
+              </div>
+              <!-- Decision -->
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-2.5 flex items-center gap-2.5"
+              >
+                <svg viewBox="0 0 64 44" class="w-14 h-10 shrink-0">
+                  <polygon
+                    points="32,5 58,22 32,39 6,22"
+                    fill="#1a1e2e"
+                    stroke="#e0af68"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="6"
+                    y1="22"
+                    x2="1"
+                    y2="34"
+                    stroke="#4ade80"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="58"
+                    y1="22"
+                    x2="63"
+                    y2="34"
+                    stroke="#f87171"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="32"
+                    y="25"
+                    fill="#fde68a"
+                    font-size="8"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    i &lt;= n
+                  </text>
+                </svg>
+                <div>
+                  <div class="text-xs font-bold text-amber-300">
+                    Rẽ Nhánh / Lặp
+                  </div>
+                  <div class="text-[11px] text-slate-400">
+                    Nhánh <b class="text-emerald-400">True</b> (xanh) &amp;
+                    <b class="text-rose-400">False</b> (đỏ).
+                  </div>
+                </div>
+              </div>
+              <!-- Subroutine -->
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-2.5 flex items-center gap-2.5"
+              >
+                <svg viewBox="0 0 64 44" class="w-14 h-10 shrink-0">
+                  <rect
+                    x="20"
+                    y="10"
+                    width="24"
+                    height="28"
+                    rx="3"
+                    fill="#1a1e2e"
+                    stroke="#2ac3de"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="32"
+                    y1="2"
+                    x2="32"
+                    y2="10"
+                    stroke="#67e8f9"
+                    stroke-width="2"
+                  />
+                  <circle cx="32" cy="2" r="2" fill="#2ac3de" />
+                </svg>
+                <div>
+                  <div class="text-xs font-bold text-cyan-300">
+                    Tháp Hàm Con
+                  </div>
+                  <div class="text-[11px] text-slate-400">
+                    Gọi hàm con ở Quận (Tab) khác.
+                  </div>
+                </div>
+              </div>
+              <!-- Memory -->
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-2.5 flex items-center gap-2.5"
+              >
+                <svg viewBox="0 0 64 44" class="w-14 h-10 shrink-0">
+                  <rect
+                    x="6"
+                    y="18"
+                    width="14"
+                    height="14"
+                    rx="2"
+                    fill="#1a1e2e"
+                    stroke="#475569"
+                    stroke-width="1.5"
+                  />
+                  <rect
+                    x="25"
+                    y="11"
+                    width="14"
+                    height="14"
+                    rx="2"
+                    fill="#1e293b"
+                    stroke="#2ac3de"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="44"
+                    y="18"
+                    width="14"
+                    height="14"
+                    rx="2"
+                    fill="#1a1e2e"
+                    stroke="#475569"
+                    stroke-width="1.5"
+                  />
+                </svg>
+                <div>
+                  <div class="text-xs font-bold text-indigo-300">
+                    Khay Bộ Nhớ
+                  </div>
+                  <div class="text-[11px] text-slate-400">
+                    Mảng 1D &amp; Ma trận 2D nhô sáng.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- MỤC 3: THAO TÁC VẼ 2D / 3D & CHẾ ĐỘ TOÀN MÀN HÌNH -->
+          <section
+            id="mn3"
+            class="bg-[#0b0e1a] border border-[#232942] rounded-xl p-4"
+          >
+            <h3
+              class="flex items-center gap-2 text-cyan-300 font-bold text-sm mb-3"
+            >
+              <span>3. Thao tác Di chuyển Bản vẽ 2D/3D &amp; Chế độ Focus</span>
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-3 flex items-center gap-3"
+              >
+                <svg viewBox="0 0 72 60" class="w-16 h-14 shrink-0">
+                  <rect
+                    x="6"
+                    y="6"
+                    width="60"
+                    height="48"
+                    rx="8"
+                    fill="#090b14"
+                    stroke="#38bdf8"
+                    stroke-width="1.5"
+                    stroke-dasharray="3 3"
+                  />
+                  <path
+                    d="M 36 14 L 36 46 M 20 30 L 52 30"
+                    stroke="#22d3ee"
+                    stroke-width="2"
+                  />
+                  <polygon points="36,10 32,16 40,16" fill="#22d3ee" />
+                  <polygon points="36,50 32,44 40,44" fill="#22d3ee" />
+                  <polygon points="16,30 22,26 22,34" fill="#22d3ee" />
+                  <polygon points="56,30 50,26 50,34" fill="#22d3ee" />
+                </svg>
+                <div class="text-xs space-y-1">
+                  <div class="font-bold text-white">
+                    Di chuyển (Pan) &amp; Kéo thả Sơ đồ 2D
+                  </div>
+                  <p class="text-[11px] text-slate-400">
+                    • Ở <b>📐 Mặt Bằng 2D</b>:
+                    <b>Nhấn giữ chuột trái vào nền trống và kéo</b> để trượt bản
+                    vẽ tự do.<br />
+                    • <b>Kéo thả nhãn khối</b> để dời vị trí khối (bắt lưới
+                    20px).<br />
+                    • <b>Bấm vào khối</b> để hiện thanh công cụ mini:
+                    <span class="text-cyan-300"
+                      >[✏️ Sửa | 🎯 Breakpoint | 🗑 Xóa]</span
+                    >.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-[#121626] border border-[#252d47] rounded-lg p-3 flex items-center gap-3"
+              >
+                <svg viewBox="0 0 72 60" class="w-16 h-14 shrink-0">
+                  <rect
+                    x="4"
+                    y="8"
+                    width="64"
+                    height="44"
+                    rx="6"
+                    fill="#090b14"
+                    stroke="#2dd4bf"
+                    stroke-width="1.8"
+                  />
+                  <rect
+                    x="7"
+                    y="11"
+                    width="16"
+                    height="38"
+                    rx="3"
+                    fill="#1e293b"
+                    stroke="#6366f1"
+                    stroke-width="1.2"
+                  />
+                  <rect
+                    x="26"
+                    y="11"
+                    width="39"
+                    height="38"
+                    rx="3"
+                    fill="#0f172a"
+                    stroke="#22d3ee"
+                    stroke-width="1.2"
+                  />
+                  <text
+                    x="45"
+                    y="33"
+                    fill="#67e8f9"
+                    font-size="8"
+                    font-family="monospace"
+                    text-anchor="middle"
+                  >
+                    Canvas
+                  </text>
+                </svg>
+                <div class="text-xs space-y-1">
+                  <div class="font-bold text-white">
+                    ⛶ Toàn Màn Hình Vẽ (Focus Mode) &amp; Bitto AI
+                  </div>
+                  <p class="text-[11px] text-slate-400">
+                    • Bấm <b>⛶ Toàn Màn Hình</b> để chỉ giữ lại
+                    <b>Thanh Trái</b> và khung vẽ rộng tối đa.<br />
+                    • Bấm <b>💬 Trò chuyện</b> trên đầu <b>Bitto</b> để hỏi gợi
+                    ý thuật toán, Big-O hoặc sửa lỗi.<br />
+                    • Khi có <b>vòng lặp vô tận</b>, hệ thống tự ngắt an toàn
+                    hoặc bấm <b>🛑 Kill Switch</b>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- MỤC 4: TÓM TẮT PHÍM TẮT NHANH -->
+          <section
+            id="mn4"
+            class="bg-[#0b0e1a] border border-[#232942] rounded-xl p-3.5"
+          >
+            <h3 class="text-cyan-300 font-bold text-sm mb-2">
+              4. Phím tắt thông dụng
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-[11.5px]">
+              <div
+                class="bg-[#121626] px-2.5 py-1.5 rounded border border-[#232942] flex items-center justify-between"
+              >
+                <span class="text-slate-400">Trượt bản đồ</span>
+                <span><kbd>Space</kbd> + Kéo / Chuột phải</span>
+              </div>
+              <div
+                class="bg-[#121626] px-2.5 py-1.5 rounded border border-[#232942] flex items-center justify-between"
+              >
+                <span class="text-slate-400">Thu phóng</span>
+                <span>Cuộn chuột (Wheel)</span>
+              </div>
+              <div
+                class="bg-[#121626] px-2.5 py-1.5 rounded border border-[#232942] flex items-center justify-between"
+              >
+                <span class="text-slate-400">Hoàn tác / Làm lại</span>
+                <span><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></span>
+              </div>
+              <div
+                class="bg-[#121626] px-2.5 py-1.5 rounded border border-[#232942] flex items-center justify-between"
+              >
+                <span class="text-slate-400">Xóa khối chọn</span>
+                <span><kbd>Del</kbd> / <kbd>Backspace</kbd></span>
+              </div>
+              <div
+                class="bg-[#121626] px-2.5 py-1.5 rounded border border-[#232942] flex items-center justify-between"
+              >
+                <span class="text-slate-400">Chạy Code</span>
+                <span><kbd>Ctrl</kbd>+<kbd>Enter</kbd></span>
+              </div>
+              <div
+                class="bg-[#121626] px-2.5 py-1.5 rounded border border-[#232942] flex items-center justify-between"
+              >
+                <span class="text-slate-400">Mở Sổ Tay</span>
+                <span>Phím <kbd>F1</kbd></span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Chân trang Sổ Tay: Nút Xác Nhận Đã Đọc (Bắt buộc lần đầu vào web) -->
+        <div
+          class="px-5 py-3 bg-[#0d101d] border-t border-[#232942] flex items-center justify-between gap-3"
+        >
+          <span id="manualFooterHint" class="text-xs text-slate-400">
+            💡 Bạn có thể mở lại Sổ Tay bất cứ lúc nào bằng nút
+            <b>📖 Sổ Tay Hướng Dẫn</b> (hoặc phím
+            <kbd
+              class="px-1.5 py-0.5 rounded bg-[#1b2033] text-slate-200 mono text-[10px]"
+              >F1</kbd
+            >).
+          </span>
+          <button
+            id="btnAcknowledgeManual"
+            onclick="acknowledgeAndCloseManual()"
+            class="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white text-xs font-extrabold shadow-lg shrink-0 transition"
+          >
+            ✓ Tôi đã hiểu — Bắt đầu sử dụng!
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= [UPGRADE FEATURE 1] MODAL: SKETCH-TO-DIAGRAM PAD ================= -->
+    <div
+      id="sketchModal"
+      class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-3"
+      onclick="if (event.target === this) closeSketchModal();"
+    >
+      <div
+        id="sketchModalDialog"
+        class="relative bg-[#121521] border border-cyan-500/40 rounded-xl w-[1060px] max-w-[97vw] h-[88vh] flex flex-col shadow-2xl overflow-hidden transition-all duration-150"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Bảng vẽ tay phác thảo sơ đồ khối"
+      >
+        <!-- Top Header & Toolbar -->
+        <div
+          class="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 bg-[#0d101d] border-b border-[#232942]"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="text-sm font-bold text-cyan-300 flex items-center gap-1.5"
+            >
+              <span
+                >✏️ Bảng Vẽ Tay &amp; Nhận Diện Hình Học
+                (Sketch-to-Diagram)</span
+              >
+            </span>
+            <span
+              id="sketchRecognizeSummary"
+              class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-indigo-200 mono"
+            >
+              0 khối • 0 dây nối
+            </span>
+          </div>
+
+          <!-- Drawing Tools -->
+          <div class="flex flex-wrap items-center gap-1.5 text-xs">
+            <button
+              id="btnSketchPen"
+              onclick="setSketchTool('pen')"
+              class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] border border-[#2e3657] text-slate-200 font-semibold sketch-tool-active"
+              title="Bút vẽ nét hình học & mũi tên nối"
+            >
+              🖊 Bút Vẽ (Pen)
+            </button>
+            <button
+              id="btnSketchEraser"
+              onclick="setSketchTool('eraser')"
+              class="px-2.5 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] border border-[#2e3657] text-slate-200 font-semibold"
+              title="Tẩy xóa nét vẽ chạm phải"
+            >
+              🧹 Tẩy (Eraser)
+            </button>
+            <button
+              onclick="undoSketchStroke()"
+              class="px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] border border-[#2e3657] text-slate-300"
+              title="Hoàn tác nét vẽ vừa rồi"
+            >
+              ↶ Hoàn Nét
+            </button>
+            <button
+              onclick="clearSketchCanvas()"
+              class="px-2.5 py-1 rounded bg-rose-500/20 hover:bg-rose-500/35 border border-rose-500/40 text-rose-200 font-semibold"
+              title="Xóa toàn bộ bảng vẽ"
+            >
+              🗑 Xóa Hết (Clear)
+            </button>
+
+            <div
+              class="flex items-center gap-1.5 px-2 py-1 rounded bg-[#090b14] border border-[#232942]"
+            >
+              <span class="text-[11px] text-slate-400">Nét:</span>
+              <input
+                type="range"
+                id="sketchStrokeWidth"
+                min="2"
+                max="10"
+                step="1"
+                value="3"
+                oninput="updateSketchStrokeWidth(this.value)"
+                class="w-16 accent-cyan-400"
+                aria-label="Độ dày nét vẽ"
+              />
+              <span
+                id="sketchStrokeWidthBadge"
+                class="text-[11px] mono text-cyan-300"
+                >3px</span
+              >
+            </div>
+
+            <button
+              onclick="loadSampleSketchDiagram()"
+              class="px-2.5 py-1 rounded bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/40 text-amber-200 font-semibold"
+              title="Tự động vẽ một sơ đồ mẫu để thử nghiệm ngay bộ nhận diện hình học"
+            >
+              🎨 Vẽ Mẫu Thử
+            </button>
+
+            <label
+              class="flex items-center gap-1 px-2 py-1 rounded bg-[#090b14] border border-[#232942] text-[11px] text-slate-300 cursor-pointer"
+              title="Nếu bật: tự động căn chỉnh bằng quy hoạch Sugiyama. Nếu tắt: giữ nguyên vị trí tương đối bạn vừa vẽ."
+            >
+              <input
+                type="checkbox"
+                id="sketchAutoLayoutToggle"
+                checked
+                class="accent-cyan-400"
+              />
+              <span>Auto-Layout</span>
+            </label>
+
+            <button
+              onclick="applySketchToMainDiagram()"
+              class="px-3 py-1.5 rounded bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold shadow-lg"
+            >
+              ⚡ Nhận Diện &amp; Sinh Sơ Đồ
+            </button>
+
+            <button
+              id="btnSketchMaximize"
+              onclick="toggleSketchModalMaximize()"
+              class="px-2.5 py-1 rounded bg-teal-500/20 hover:bg-teal-500/35 border border-teal-400/50 text-teal-200 font-semibold"
+              title="⛶ Phóng to tối đa / 🗗 Thu nhỏ bảng vẽ phác thảo"
+            >
+              ⛶ Phóng to tối đa
+            </button>
+
+            <button
+              onclick="closeSketchModal()"
+              class="px-2 py-1 rounded bg-[#1b2033] hover:bg-[#252b42] text-slate-400 hover:text-white ml-1"
+              title="Đóng bảng vẽ (ESC)"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Guide Bar -->
+        <div
+          class="px-4 py-1.5 bg-[#101426] border-b border-[#232942] flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-300"
+        >
+          <div class="flex flex-wrap items-center gap-4">
+            <span
+              >⭕ <b>Hình Elip / Tròn:</b> Khối
+              <code class="text-teal-300">Start</code> (trên),
+              <code class="text-rose-300">End</code> (dưới) hoặc
+              <code class="text-slate-300">Connector</code> (nhỏ)</span
+            >
+            <span
+              >▭ <b>Hình Chữ Nhật / Vuông:</b> Khối
+              <code class="text-blue-300">Process</code> (hoặc
+              <code class="text-purple-300">Input/Output</code> nếu
+              nghiêng)</span
+            >
+            <span
+              >◇ <b>Hình Thoi (4 đỉnh nhọn):</b> Khối
+              <code class="text-amber-300">Decision (if/loop)</code></span
+            >
+            <span
+              >➔ <b>Đường thẳng / Mũi tên hở:</b> Dây nối
+              <code class="text-cyan-300">Edge</code> giữa 2 hình</span
+            >
+          </div>
+          <span class="text-cyan-300 mono text-[10px]"
+            >Nhấp vào nhãn nhận diện trên hình để sửa nhanh biểu thức C++ trước
+            khi sinh sơ đồ!</span
+          >
+        </div>
+
+        <!-- Main 2D Sketch Canvas Area -->
+        <div
+          class="flex-1 relative overflow-hidden sketch-canvas-bg"
+          id="sketchCanvasContainer"
+        >
+          <canvas
+            id="sketchPadCanvas"
+            class="absolute inset-0 w-full h-full cursor-crosshair touch-none"
+          ></canvas>
+          <!-- Interactive recognized node content labels overlay -->
+          <div
+            id="sketchLabelsOverlay"
+            class="absolute inset-0 pointer-events-none overflow-hidden"
+          ></div>
+        </div>
+        <!-- Corner Resize Handle for Sketch Modal -->
+        <div
+          id="sketchModalResizer"
+          title="Kéo góc này để thay đổi kích thước bảng vẽ phác thảo (Canvas tự động co giãn không méo tỉ lệ)"
+        >
+          ◢
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= [UPGRADE v5.4 FEATURE 2] MODAL: OFFICIAL BRAND IDENTITY & SPLASH ================= -->
+    <div
+      id="brandIdentityModal"
+      class="fixed inset-0 bg-black/75 hidden items-center justify-center z-50 p-4"
+      onclick="if (event.target === this) closeBrandIdentityModal();"
+    >
+      <div
+        class="bg-[#121521] border border-cyan-400/50 rounded-2xl w-[500px] max-w-[95vw] p-5 space-y-4 shadow-2xl text-center relative"
+        role="dialog"
+        aria-modal="true"
+        aria-label="AlgoFlow Studio v5.4 Official Brand Identity"
+      >
+        <button
+          onclick="closeBrandIdentityModal()"
+          class="absolute top-3 right-3 text-slate-400 hover:text-white text-sm px-2 py-1"
+        >
+          ✕
+        </button>
+        <div class="flex flex-col items-center gap-2.5 pt-1">
+          <img
+            src="data:image/png;base64,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"
+            alt="AlgoFlow Studio Official Brand Logo"
+            class="brand-logo-lg"
+          />
+          <h2
+            class="text-lg font-extrabold bg-gradient-to-r from-cyan-300 via-indigo-200 to-purple-300 bg-clip-text text-transparent"
+          >
+            AlgoFlow Studio v6.1 • The Living Algorithm City & Visual
+            Programming Workbench
+          </h2>
+          <p class="text-xs text-slate-300 leading-relaxed max-w-md">
+            Nền tảng thiết kế Sơ đồ Khối 2D/3D Isometric, biên dịch hai chiều
+            AST C++17, VS Code IDE tích hợp bộ quét lỗi ngữ nghĩa thời gian thực
+            và linh vật 3D <b>Bitto</b> dẫn đường thông minh.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 gap-2 text-left text-[11px] bg-[#090b14] p-3 rounded-xl border border-[#232942]"
+        >
+          <div class="text-cyan-300">
+            ✦ <b>Feature 1:</b> Kéo dây Bezier &amp; Snap 20px
+          </div>
+          <div class="text-purple-300">
+            ✦ <b>Feature 2:</b> Nhận diện Thương hiệu v5.4
+          </div>
+          <div class="text-emerald-300">
+            ✦ <b>Feature 3:</b> Testbench Kéo Giãn &amp; Ẩn/Hiện
+          </div>
+          <div class="text-amber-300">
+            ✦ <b>Feature 4:</b> VS Code IDE &amp; Terminal Scanner
+          </div>
+          <div class="col-span-2 text-indigo-300">
+            ✦ <b>Feature 5:</b> Linh vật 3D Bitto Bay Tự Do &amp; Onboarding
+            Tour 7 bước
+          </div>
+        </div>
+        <div class="flex justify-center gap-2 pt-1">
+          <button
+            onclick="
+              closeBrandIdentityModal();
+              startBittoOnboardingTour();
+            "
+            class="px-4 py-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white text-xs font-bold shadow"
+          >
+            🤖 Bắt đầu Tour cùng Bitto
+          </button>
+          <button
+            onclick="closeBrandIdentityModal()"
+            class="px-4 py-1.5 rounded-lg bg-[#1b2033] hover:bg-[#252b42] text-slate-200 text-xs font-semibold"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MODULAR APPLICATION SCRIPTS (11 JS MODULES) ================= -->
+    <script src="js/state.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/engine3d.js"></script>
+    <script src="js/hud2d.js"></script>
+    <script src="js/evaluator.js"></script>
+    <script src="js/codegen.js"></script>
+    <script src="js/reverse.js"></script>
+    <script src="js/debugger.js"></script>
+    <script src="js/bitto.js"></script>
+    <script src="js/sketch.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

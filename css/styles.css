@@ -1,0 +1,952 @@
+/* ============================================================================
+ * AlgoFlow Studio v6.1 - The Living Algorithm City & Visual Programming Workbench
+ * Tệp: css/styles.css
+ * Mô tả: Định kiểu giao diện Cyberpunk / Tokyo Night, Resizers, 3D HUD Badges,
+ *        VS Code IDE Themes, Linh vật Bitto 3D, Sketch Pad & Focus Canvas Mode.
+ * ============================================================================ */
+
+:root {
+  --bg-dark: #090b14;
+  --bg-panel: #121521;
+  --border-col: #232942;
+  --accent: #7aa2f7;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #c0caf5;
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow: hidden;
+}
+
+.mono {
+  font-family: "Fira Code", Consolas, monospace;
+}
+
+/* Resizer bars */
+.resizer-col {
+  width: 5px;
+  background: #181c2e;
+  cursor: col-resize;
+  transition: background 0.15s;
+  z-index: 40;
+  flex-shrink: 0;
+}
+.resizer-col:hover,
+.resizer-col.active {
+  background: #7aa2f7;
+}
+
+.resizer-row {
+  height: 5px;
+  background: #181c2e;
+  cursor: row-resize;
+  transition: background 0.15s;
+  z-index: 40;
+  flex-shrink: 0;
+}
+.resizer-row:hover,
+.resizer-row.active {
+  background: #7aa2f7;
+}
+
+/* Floating 3D Building HUD Labels */
+.city-hud-label {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  pointer-events: auto;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    box-shadow 0.15s,
+    border-color 0.15s;
+  z-index: 15;
+}
+.city-hud-label:hover {
+  z-index: 30;
+}
+.hud-selected {
+  box-shadow:
+    0 0 0 2px #7aa2f7,
+    0 0 20px rgba(122, 162, 247, 0.75) !important;
+}
+.hud-trace {
+  box-shadow:
+    0 0 0 2px #e0af68,
+    0 0 26px rgba(224, 175, 104, 0.95) !important;
+}
+.hud-error {
+  box-shadow:
+    0 0 0 2px #f7768e,
+    0 0 18px rgba(247, 118, 142, 0.75) !important;
+}
+
+/* Port Pill Buttons on 3D HUD */
+.hud-port {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 5px;
+  font-size: 9px;
+  border-radius: 9999px;
+  font-weight: 700;
+  cursor: crosshair;
+  transition:
+    transform 0.12s,
+    filter 0.12s;
+}
+.hud-port:hover {
+  transform: scale(1.18);
+  filter: brightness(1.25);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121521;
+}
+::-webkit-scrollbar-thumb {
+  background: #28304d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4770;
+}
+
+/* ===== v5.1: IDE, Bitto, Manual ===== */
+textarea,
+.sel-text {
+  user-select: text;
+}
+.ide-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  overflow: hidden;
+}
+.ide-gutter {
+  width: 40px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #0d1020;
+  border-right: 1px solid #232942;
+  color: #4a5578;
+  text-align: right;
+  font:
+    12px/18px "Fira Code",
+    Consolas,
+    monospace;
+  padding: 10px 7px 30px 0;
+  white-space: pre;
+}
+.ide-main {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+#codeOutputBox {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #c0caf5;
+  border: 0;
+  outline: 0;
+  resize: none;
+  padding: 10px 12px;
+  white-space: pre;
+  overflow: auto;
+  font:
+    12px/18px "Fira Code",
+    Consolas,
+    monospace;
+  tab-size: 4;
+  caret-color: #22d3ee;
+}
+#codeOutputBox:focus-visible {
+  box-shadow: inset 0 0 0 1px rgba(34, 211, 238, 0.55);
+}
+#ideHL {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px solid #facc15;
+  border-radius: 3px;
+  background: rgba(250, 204, 21, 0.12);
+  box-shadow:
+    0 0 10px rgba(250, 204, 21, 0.75),
+    inset 0 0 8px rgba(250, 204, 21, 0.25);
+}
+#bittoDock {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 25;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  pointer-events: none;
+}
+#bittoCanvas {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  pointer-events: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 0 14px rgba(34, 211, 238, 0.35));
+}
+#bittoBubble {
+  pointer-events: auto;
+  max-width: 230px;
+  margin-bottom: 78px;
+  padding: 8px 11px;
+  border-radius: 12px 12px 12px 3px;
+  background: rgba(18, 21, 33, 0.96);
+  border: 1px solid rgba(34, 211, 238, 0.55);
+  color: #cffafe;
+  font-size: 12px;
+  line-height: 1.45;
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+}
+#bittoBubble.off {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+}
+#bittoBubble[data-mood="warn"] {
+  border-color: #facc15;
+  color: #fef08a;
+}
+#bittoBubble[data-mood="fail"] {
+  border-color: #f87171;
+  color: #fecaca;
+}
+#manualBody h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #a5f3fc;
+  margin-bottom: 8px;
+}
+#manualBody kbd {
+  font:
+    11px "Fira Code",
+    monospace;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #1b2033;
+  border: 1px solid #2e3657;
+  color: #e2e8f0;
+}
+#bittoBubble[data-mood="angry"] {
+  border-color: #ef4444;
+  background: rgba(45, 10, 18, 0.96);
+  color: #fecaca;
+  font-weight: 700;
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.65);
+}
+#bittoBubble[data-mood="tickle"] {
+  border-color: #38bdf8;
+  color: #e0f2fe;
+}
+#bittoDock {
+  user-select: none;
+  touch-action: none;
+}
+#bittoCanvas {
+  cursor: grab;
+  touch-action: none;
+}
+#bittoCanvas:active {
+  cursor: grabbing;
+}
+#threeCanvasMount {
+  touch-action: none;
+}
+.mode-2d-active .city-hud-label {
+  cursor: move;
+}
+.drawer-collapsed {
+  display: none !important;
+}
+
+/* =====================================================================
+   [UPGRADE FEATURE 1, 2, 3]: CUSTOM STYLES FOR SKETCH PAD, 2D INTERACTION & BITTO
+   ===================================================================== */
+/* Feature 1: Sketch-to-Diagram Pad Grid Overlay */
+.sketch-canvas-bg {
+  background-color: #070913;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(56, 189, 248, 0.07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(56, 189, 248, 0.07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      rgba(122, 162, 247, 0.14) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(122, 162, 247, 0.14) 1px,
+      transparent 1px
+    );
+  background-size:
+    20px 20px,
+    20px 20px,
+    100px 100px,
+    100px 100px;
+}
+.sketch-tool-active {
+  background: rgba(34, 211, 238, 0.25) !important;
+  border-color: #22d3ee !important;
+  color: #cffafe !important;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
+}
+
+/* Feature 2: Rubberband Wire & Magnetic Port Snap + In-place Actions */
+#rubberbandWireSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 24;
+  overflow: visible;
+}
+.hud-port.port-magnetic-snap,
+.city-hud-label.port-target-hover .hud-port-in {
+  transform: scale(1.38) !important;
+  background-color: #22d3ee !important;
+  color: #090b14 !important;
+  border-color: #ffffff !important;
+  box-shadow:
+    0 0 14px rgba(34, 211, 238, 0.95),
+    0 0 24px rgba(168, 85, 247, 0.75) !important;
+  filter: brightness(1.3);
+}
+.city-hud-label.port-target-hover {
+  border-color: #22d3ee !important;
+  box-shadow:
+    0 0 0 2px #22d3ee,
+    0 0 22px rgba(34, 211, 238, 0.65) !important;
+}
+.hud-quick-delete {
+  opacity: 0;
+  transform: scale(0.85);
+  transition:
+    opacity 0.14s ease,
+    transform 0.14s ease,
+    background-color 0.14s ease;
+  pointer-events: none;
+}
+.city-hud-label:hover .hud-quick-delete,
+.city-hud-label.hud-selected .hud-quick-delete {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.inplace-node-input {
+  background: #090b14;
+  color: #67e8f9;
+  border: 1px solid #22d3ee;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 12px;
+  width: 175px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.45);
+}
+@media (prefers-reduced-motion: reduce) {
+  #bittoBubble {
+    transition: none;
+  }
+}
+
+/* =====================================================================
+   [UPGRADE v5.4]: FEATURE 1, 2, 3, 4, 5 STYLES
+   ===================================================================== */
+/* Feature 1: 2D Grid Snap Overlay & Enhanced Rubberband / Port Magnet */
+.mode-2d-active #threeCanvasMount::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(34, 211, 238, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(34, 211, 238, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      rgba(122, 162, 247, 0.16) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(122, 162, 247, 0.16) 1px,
+      transparent 1px
+    );
+  background-size:
+    20px 20px,
+    20px 20px,
+    100px 100px,
+    100px 100px;
+  z-index: 5;
+}
+#gridSnapToast {
+  position: absolute;
+  pointer-events: none;
+  z-index: 45;
+  transform: translate(-50%, -145%);
+  background: rgba(9, 11, 20, 0.94);
+  border: 1px solid #22d3ee;
+  color: #67e8f9;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.55);
+  white-space: nowrap;
+}
+
+/* Feature 2: Official Brand Logo Badges & Splash */
+.brand-logo-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid rgba(34, 211, 238, 0.6);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.45);
+  flex-shrink: 0;
+}
+.brand-logo-lg {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 2px solid rgba(34, 211, 238, 0.75);
+  box-shadow:
+    0 0 24px rgba(34, 211, 238, 0.55),
+    0 0 40px rgba(168, 85, 247, 0.35);
+}
+
+/* Feature 3: Resizable & Collapsible Testbench */
+#testbenchResizer {
+  height: 6px;
+  background: #181c2e;
+  cursor: row-resize;
+  transition: background 0.15s;
+  z-index: 35;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#testbenchResizer:hover,
+#testbenchResizer.active {
+  background: #7aa2f7;
+}
+#testbenchResizer::after {
+  content: "⋯";
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+#testbenchPanel.tb-collapsed {
+  height: 38px !important;
+  min-height: 38px !important;
+  overflow: hidden !important;
+}
+#testbenchPanel.tb-collapsed #testbenchBody {
+  display: none !important;
+}
+
+/* Feature 4: VS Code Theme (One Dark Pro / Tokyo Night), Syntax Layer, Active Line & Autocomplete */
+.ide-theme-onedark {
+  --ide-bg: #282c34;
+  --ide-gutter-bg: #21252b;
+  --ide-gutter-fg: #636d83;
+  --ide-active-line: rgba(44, 49, 60, 0.78);
+  --ide-kw: #c678dd;
+  --ide-type: #e5c07b;
+  --ide-fn: #61afef;
+  --ide-str: #98c379;
+  --ide-num: #d19a66;
+  --ide-cmt: #5c6370;
+  --ide-op: #56b6c2;
+  --ide-fg: #abb2bf;
+}
+.ide-theme-tokyonight {
+  --ide-bg: #0f111a;
+  --ide-gutter-bg: #0b0d16;
+  --ide-gutter-fg: #4a5578;
+  --ide-active-line: rgba(30, 35, 58, 0.72);
+  --ide-kw: #bb9af7;
+  --ide-type: #2ac3de;
+  --ide-fn: #7aa2f7;
+  --ide-str: #9ece6a;
+  --ide-num: #ff9e64;
+  --ide-cmt: #565f89;
+  --ide-op: #89ddff;
+  --ide-fg: #c0caf5;
+}
+#idePanelContainer {
+  background-color: var(--ide-bg, #0f111a);
+  transition: all 0.2s ease;
+}
+#idePanelContainer.ide-fullscreen {
+  position: fixed !important;
+  inset: 12px !important;
+  z-index: 85 !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 0 50px rgba(0, 0, 0, 0.88),
+    0 0 25px rgba(56, 189, 248, 0.35) !important;
+}
+#idePanelContainer.ide-collapsed .ide-wrap,
+#idePanelContainer.ide-collapsed #ideToolbar,
+#idePanelContainer.ide-collapsed #ideStatusBar {
+  display: none !important;
+}
+#idePanelContainer.ide-collapsed {
+  flex: 0 0 auto !important;
+}
+#ideGutter {
+  background: var(--ide-gutter-bg, #0d1020);
+  color: var(--ide-gutter-fg, #4a5578);
+  user-select: none;
+}
+#ideActiveLineHL {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: var(--ide-active-line, rgba(30, 35, 58, 0.72));
+  border-left: 2px solid #38bdf8;
+  pointer-events: none;
+  z-index: 1;
+  display: block;
+}
+#ideSyntaxHighlightLayer {
+  position: absolute;
+  inset: 0;
+  padding: 10px 12px;
+  margin: 0;
+  font:
+    12px/18px "Fira Code",
+    Consolas,
+    monospace;
+  tab-size: 4;
+  white-space: pre;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+  color: var(--ide-fg, #c0caf5);
+}
+#codeOutputBox.syntax-overlay-active {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  caret-color: #22d3ee !important;
+  z-index: 4;
+}
+#codeOutputBox.syntax-overlay-active::selection {
+  background: rgba(56, 189, 248, 0.28);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.tok-kw {
+  color: var(--ide-kw, #bb9af7);
+  font-weight: 600;
+}
+.tok-type {
+  color: var(--ide-type, #2ac3de);
+  font-weight: 600;
+}
+.tok-fn {
+  color: var(--ide-fn, #7aa2f7);
+}
+.tok-str {
+  color: var(--ide-str, #9ece6a);
+}
+.tok-num {
+  color: var(--ide-num, #ff9e64);
+}
+.tok-cmt {
+  color: var(--ide-cmt, #565f89);
+  font-style: italic;
+}
+.tok-op {
+  color: var(--ide-op, #89ddff);
+}
+.tok-err {
+  text-decoration: wavy underline #f43f5e;
+  background: rgba(244, 63, 94, 0.14);
+}
+#ideAutocompletePopup {
+  position: absolute;
+  z-index: 30;
+  min-width: 190px;
+  max-height: 165px;
+  overflow-y: auto;
+  background: #16192b;
+  border: 1px solid #38bdf8;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+  font:
+    11px/1.4 "Fira Code",
+    monospace;
+}
+.ac-item {
+  padding: 3px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #cbd5e1;
+}
+.ac-item:hover,
+.ac-item.ac-active {
+  background: rgba(56, 189, 248, 0.25);
+  color: #ffffff;
+}
+.terminal-error-glow {
+  text-shadow:
+    0 0 10px rgba(251, 113, 133, 0.85),
+    0 0 20px rgba(244, 63, 94, 0.55);
+  animation: pulseErrorGlow 1.6s infinite alternate;
+}
+@keyframes pulseErrorGlow {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.28);
+  }
+}
+#terminalConsolePanel.term-fullscreen {
+  position: fixed !important;
+  inset: 16px !important;
+  z-index: 88 !important;
+  background: #090b14 !important;
+  border: 2px solid #f43f5e !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  box-shadow: 0 0 48px rgba(0, 0, 0, 0.9) !important;
+}
+#terminalConsolePanel.term-collapsed #stdoutBox,
+#terminalConsolePanel.term-collapsed #terminalDiagnosticsBox {
+  display: none !important;
+}
+
+/* Feature 5: Unrestricted Fixed Spatial Roaming for Bitto & Onboarding Tour */
+#bittoDock {
+  position: fixed !important;
+  left: 24px;
+  bottom: 24px;
+  z-index: 92 !important;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  pointer-events: none;
+  transition: none;
+}
+#bittoBubble {
+  max-width: 280px;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.72),
+    0 0 16px rgba(34, 211, 238, 0.25);
+}
+#bittoTourControls {
+  pointer-events: auto;
+}
+#bittoTourSpotlight {
+  position: fixed;
+  pointer-events: none;
+  z-index: 91;
+  border: 2px solid #22d3ee;
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 4px rgba(34, 211, 238, 0.22),
+    0 0 24px rgba(34, 211, 238, 0.9),
+    inset 0 0 12px rgba(34, 211, 238, 0.35);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  display: none;
+}
+#bittoLaserSvg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 91;
+  display: none;
+}
+
+/* =====================================================================
+   [UPGRADE v5.4+]: FREE-FORM 2D CANVAS PANNING & DYNAMIC AUDIO ENGINE
+   ===================================================================== */
+#cityViewport.canvas-pan-ready,
+#cityViewport.canvas-pan-ready #threeCanvasMount,
+#cityViewport.canvas-pan-ready #threeCanvasMount canvas {
+  cursor: grab !important;
+}
+#cityViewport.canvas-pan-active,
+#cityViewport.canvas-pan-active #threeCanvasMount,
+#cityViewport.canvas-pan-active #threeCanvasMount canvas {
+  cursor: grabbing !important;
+}
+#cityViewport .city-hud-label {
+  cursor: move !important;
+}
+#cityViewport .hud-port {
+  cursor: crosshair !important;
+}
+#zoomPercentBadge {
+  min-width: 48px;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+#zoomPercentBadge:hover {
+  background-color: rgba(34, 211, 238, 0.25);
+  border-color: #22d3ee;
+  color: #cffafe;
+}
+.sfx-pulse-active {
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.65);
+}
+
+/* =====================================================================
+   [UPGRADE v6.0]: THE LIVING ALGORITHM CITY & VISUAL PROGRAMMING WORKBENCH
+   ===================================================================== */
+/* GÓI 1: Tô đỏ khối lặp vô tận (TLE Stagnation) & Nút Kill Switch */
+.hud-tle-infinite {
+  border-color: #ef4444 !important;
+  background: rgba(69, 10, 10, 0.95) !important;
+  box-shadow:
+    0 0 0 2px #ef4444,
+    0 0 28px rgba(239, 68, 68, 0.95) !important;
+  animation: tleShakePulse 0.45s infinite alternate;
+}
+@keyframes tleShakePulse {
+  0% {
+    transform: translate(-50%, -100%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -103%) scale(1.06);
+  }
+}
+
+/* GÓI 2: Bitto AI Copilot 2.0 - Nút viên thuốc phát sáng & Popup Chat trực tiếp */
+#btnBittoChatPill {
+  background: linear-gradient(
+    90deg,
+    rgba(14, 165, 233, 0.92),
+    rgba(139, 92, 246, 0.92)
+  );
+  border: 1px solid #67e8f9;
+  color: #ffffff;
+  box-shadow:
+    0 0 14px rgba(34, 211, 238, 0.8),
+    0 0 26px rgba(139, 92, 246, 0.45);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+#btnBittoChatPill:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    0 0 20px rgba(34, 211, 238, 1),
+    0 0 34px rgba(139, 92, 246, 0.75);
+}
+#bittoCopilotPopup {
+  pointer-events: auto;
+  width: 345px;
+  max-width: calc(100vw - 32px);
+  height: 410px;
+  max-height: 70vh;
+  background: rgba(13, 16, 29, 0.97);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(42, 195, 222, 0.65);
+  border-radius: 14px;
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.85),
+    0 0 24px rgba(42, 195, 222, 0.28);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 10px;
+  z-index: 95;
+}
+#bittoCopilotPopup.copilot-open {
+  display: flex;
+}
+#bittoCopilotPopup.copilot-minimized {
+  height: 42px !important;
+}
+#bittoCopilotPopup.copilot-minimized #bittoCopilotBody,
+#bittoCopilotPopup.copilot-minimized #bittoCopilotQuickBar,
+#bittoCopilotPopup.copilot-minimized #bittoCopilotInputRow {
+  display: none !important;
+}
+.copilot-msg-ai {
+  background: rgba(26, 30, 46, 0.95);
+  border: 1px solid rgba(42, 195, 222, 0.35);
+  color: #e0f2fe;
+  border-radius: 10px 10px 10px 2px;
+  padding: 8px 10px;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+.copilot-msg-user {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.3),
+    rgba(139, 92, 246, 0.3)
+  );
+  border: 1px solid rgba(129, 140, 248, 0.45);
+  color: #f8fafc;
+  border-radius: 10px 10px 2px 10px;
+  padding: 7px 10px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  align-self: flex-end;
+}
+
+/* GÓI 3: Focus Canvas Mode (Toàn màn hình khung vẽ Flowchart + Chỉ giữ duy nhất Thanh Trái) */
+body.focus-canvas-active > header,
+body.focus-canvas-active #rightSidebar,
+body.focus-canvas-active #rightResizer,
+body.focus-canvas-active #bottomRamPanel,
+body.focus-canvas-active #bottomResizer {
+  display: none !important;
+}
+body.focus-canvas-active #leftSidebar {
+  display: flex !important;
+}
+body.focus-canvas-active #leftResizer {
+  display: block !important;
+}
+#btnExitFocusCanvas {
+  display: none;
+}
+body.focus-canvas-active #btnExitFocusCanvas {
+  display: flex !important;
+}
+/* Luôn hiển thị rõ các cổng nối dây (+Out, +True, +False, ➔In) chuẩn giáo dục */
+.city-hud-label .hud-port {
+  opacity: 1 !important;
+  visibility: visible !important;
+  padding: 2px 7px !important;
+  font-size: 10px !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+}
+/* Thanh công cụ mini nổi ngay trên khối đang chọn */
+.hud-mini-toolbar {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  margin-top: 5px;
+  padding-top: 4px;
+  border-top: 1px dashed rgba(122, 162, 247, 0.35);
+  font-size: 10px;
+}
+.city-hud-label.hud-selected .hud-mini-toolbar {
+  display: flex;
+}
+
+/* =====================================================================
+   [UPGRADE v6.1]: IDE FULLSCREEN EXIT, RESIZABLE SKETCH PAD & HEADER
+   ===================================================================== */
+body.ide-fullscreen-active #rightSidebar {
+  z-index: 96 !important;
+}
+#idePanelContainer.ide-fullscreen {
+  position: fixed !important;
+  inset: 10px !important;
+  z-index: 98 !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 0 60px rgba(0, 0, 0, 0.92),
+    0 0 28px rgba(56, 189, 248, 0.4) !important;
+}
+#btnIdeExitFullscreen {
+  display: none;
+}
+#idePanelContainer.ide-fullscreen #btnIdeExitFullscreen {
+  display: inline-flex !important;
+}
+#sketchModalDialog.sketch-maximized {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  inset: 0 !important;
+  border-radius: 0 !important;
+  border-width: 0 !important;
+}
+#sketchModalDialog.sketch-maximized #sketchModalResizer {
+  display: none !important;
+}
+#sketchModalResizer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 22px;
+  height: 22px;
+  cursor: nwse-resize;
+  z-index: 40;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 3px;
+  color: #22d3ee;
+  font-size: 11px;
+  user-select: none;
+  background: linear-gradient(
+    135deg,
+    transparent 50%,
+    rgba(34, 211, 238, 0.28) 50%
+  );
+  border-top-left-radius: 6px;
+}
+#sketchModalResizer:hover {
+  background: linear-gradient(
+    135deg,
+    transparent 50%,
+    rgba(34, 211, 238, 0.6) 50%
+  );
+}
