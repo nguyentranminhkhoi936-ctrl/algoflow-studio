@@ -1311,3 +1311,42 @@ window.addEventListener("load", () => {
   checkAndEnforceFirstTimeManual();
   syncOrbitControlsForCurrentMode();
 });
+
+
+// =========================================================================
+// TỰ ĐỘNG THU GỌN THANH BÊN CHO MOBILE & TABLET (RESPONSIVE SAFE-HOOK)
+// =========================================================================
+function autoFoldSidebarsOnMobile() {
+  // Chỉ kích hoạt khi chiều rộng màn hình nhỏ hơn 1024px (Mobile / iPad)
+  if (window.innerWidth >= 1024) return;
+
+  try {
+    // 1. Tìm các nút bấm hoặc thanh bên trên giao diện
+    const leftSidebar = document.getElementById("leftSidebar") || document.querySelector(".sidebar-left");
+    const rightSidebar = document.getElementById("rightSidebar") || document.querySelector(".sidebar-right");
+
+    // 2. Nếu có hàm toggle có sẵn trong dự án thì gọi an toàn
+    if (typeof toggleLeftSidebar === "function") {
+      toggleLeftSidebar(false);
+    } else if (leftSidebar && !leftSidebar.classList.contains("drawer-collapsed")) {
+      leftSidebar.classList.add("drawer-collapsed");
+    }
+
+    if (typeof toggleRightSidebar === "function") {
+      toggleRightSidebar(false);
+    } else if (rightSidebar && !rightSidebar.classList.contains("drawer-collapsed")) {
+      rightSidebar.classList.add("drawer-collapsed");
+    }
+
+    // 3. Căn chỉnh lại tầm nhìn camera 3D cho vừa khung hình di động
+    if (typeof onResizeCityViewport === "function") {
+      onResizeCityViewport();
+    }
+  } catch (err) {
+    console.warn("Auto-fold sidebars warning:", err);
+  }
+}
+
+// Lắng nghe sự kiện khi trang vừa nạp xong và khi người dùng xoay ngang/dọc điện thoại
+window.addEventListener("DOMContentLoaded", autoFoldSidebarsOnMobile);
+window.addEventListener("resize", autoFoldSidebarsOnMobile);

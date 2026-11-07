@@ -296,26 +296,10 @@ textarea,
 .sketch-canvas-bg {
   background-color: #070913;
   background-image:
-    linear-gradient(
-      to right,
-      rgba(56, 189, 248, 0.07) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(56, 189, 248, 0.07) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to right,
-      rgba(122, 162, 247, 0.14) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(122, 162, 247, 0.14) 1px,
-      transparent 1px
-    );
+    linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgba(122, 162, 247, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(122, 162, 247, 0.14) 1px, transparent 1px);
   background-size:
     20px 20px,
     20px 20px,
@@ -398,26 +382,10 @@ textarea,
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(
-      to right,
-      rgba(34, 211, 238, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(34, 211, 238, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to right,
-      rgba(122, 162, 247, 0.16) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(122, 162, 247, 0.16) 1px,
-      transparent 1px
-    );
+    linear-gradient(to right, rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(to right, rgba(122, 162, 247, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(122, 162, 247, 0.16) 1px, transparent 1px);
   background-size:
     20px 20px,
     20px 20px,
@@ -949,4 +917,78 @@ body.ide-fullscreen-active #rightSidebar {
     transparent 50%,
     rgba(34, 211, 238, 0.6) 50%
   );
+}
+/* ================= RESPONSIVE MOBILE & TABLET ================= */
+@media (max-width: 1023px) {
+  /* Biến thanh trái thành ngăn kéo trượt đè lên màn hình */
+  #leftSidebar {
+    position: fixed !important;
+    left: 0;
+    top: 44px;
+    bottom: 0;
+    z-index: 50 !important;
+    width: 280px !important;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.25s ease-in-out;
+  }
+  #leftSidebar.drawer-collapsed {
+    transform: translateX(-100%);
+    display: flex !important; /* Giữ cấu trúc flex để animation trượt mượt mà */
+  }
+
+  /* Biến thanh phải (IDE/Testbench) thành ngăn kéo trượt từ phải sang */
+  #rightSidebar {
+    position: fixed !important;
+    right: 0;
+    top: 44px;
+    bottom: 0;
+    z-index: 50 !important;
+    width: 320px !important;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.25s ease-in-out;
+  }
+  #rightSidebar.drawer-collapsed {
+    transform: translateX(100%);
+    display: flex !important;
+  }
+
+  /* Ẩn các thanh kéo resize chuột trên màn hình cảm ứng */
+  #leftResizer,
+  #rightResizer {
+    display: none !important;
+  }
+
+  /* Bảng RAM đáy: chuyển từ 12 cột ngang thành các hàng cuộn dọc */
+  #bottomRamPanel {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    max-height: 180px !important;
+    overflow-y: auto !important;
+    gap: 8px !important;
+  }
+  #bottomRamPanel > div {
+    width: 100% !important;
+  }
+
+  /* Thu nhỏ và xếp gọn thanh Header trên mobile */
+  header {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    overflow-x: auto !important;
+  }
+  #tabContainer {
+    max-width: 180px !important;
+  }
+}
+/* Tối ưu kích thước chạm cho ngón tay trên màn hình cảm ứng */
+@media (pointer: coarse) {
+  .hud-port {
+    padding: 6px 10px !important;
+    font-size: 11px !important;
+    margin: 2px !important;
+  }
+  .city-hud-label {
+    padding: 8px 12px !important;
+  }
 }
